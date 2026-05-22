@@ -1,0 +1,755 @@
+{
+  "common": {
+    "contactForSpecs": "Contact sales for full specifications",
+    "downloadDatasheet": "Download datasheet",
+    "viewDetails": "View details",
+    "exploreMore": "Learn more",
+    "backToTop": "Back to top",
+    "allApplications": "ALL APPLICATIONS",
+    "context": "Background & Challenges",
+    "scenarios": "Typical Scenarios",
+    "recommendedProducts": "Recommended Products",
+    "viewModel": "View model"
+  },
+  "meta": {
+    "siteName": "KINGWOOD",
+    "siteDescription": "Guangdong Kingwood Electronic Co., Ltd. — 30 years of battery manufacturing expertise, specializing in eVTOL aviation batteries, LTO, and sodium-ion technologies for the most demanding B2B markets."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "evtol": "eVTOL",
+    "lto": "LTO",
+    "sodium": "Sodium-ion",
+    "products": "Products",
+    "applications": "Applications",
+    "contact": "Contact Sales",
+    "cta": "Contact Sales"
+  },
+  "brand": {
+    "name": "KINGWOOD",
+    "subName": "Kingwood",
+    "tagline": "Powering the Skies. Lasting the Distance.",
+    "taglineEn": "让飞行更可靠，让能量更长寿",
+    "subTagline": "Innovation with Lithium · Green Together",
+    "subTaglineEn": "创新有「锂」 · 绿色同行"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "EST. 1995  /  30 YEARS OF EXPERTISE",
+      "titleLine1": "Powering",
+      "titleHighlight1": "the Skies.",
+      "titleLine2": "Lasting",
+      "titleHighlight2": "the Distance.",
+      "subtitle": "让飞行更可靠，让能量更长寿",
+      "description": "Three decades of manufacturing legacy. Five battery chemistries. From defense-grade specialty equipment to commercial aviation — engineered for the most demanding applications.",
+      "ctaPrimary": "Explore eVTOL",
+      "ctaSecondary": "About Kingwood",
+      "scroll": "SCROLL"
+    },
+    "stats": {
+      "heritage": {
+        "value": "30",
+        "suffix": "yrs",
+        "label": "of expertise",
+        "eyebrow": "01 / HERITAGE"
+      },
+      "capacity": {
+        "value": "0.5",
+        "suffix": "GWh",
+        "label": "annual capacity",
+        "eyebrow": "02 / CAPACITY"
+      },
+      "chemistry": {
+        "value": "5",
+        "suffix": "",
+        "label": "battery chemistries",
+        "eyebrow": "03 / CHEMISTRY"
+      },
+      "quality": {
+        "value": "IATF 16949",
+        "suffix": "",
+        "label": "automotive certified",
+        "eyebrow": "04 / QUALITY"
+      }
+    },
+    "evtol": {
+      "flagshipLabel": "FLAGSHIP · 01",
+      "modelLabel": "P / N",
+      "modelNumber": "KW-eVTOL-01",
+      "moduleLabel": "eVTOL · AVIATION BATTERY MODULE",
+      "title1": "Powering the",
+      "title2": "Low-Altitude Economy",
+      "subtitle": "Commercial eVTOL battery · in production",
+      "description": "Independently developed and manufactured. Over one million units delivered into China's trillion-yuan low-altitude economy strategy — Kingwood is among the few cell suppliers to have achieved commercial scale.",
+      "spec1Label": "ENERGY",
+      "spec1Value": "≥330",
+      "spec1Unit": "Wh/kg",
+      "spec2Label": "POWER",
+      "spec2Value": "≥8C",
+      "spec2Unit": "discharge",
+      "spec3Label": "CYCLES",
+      "spec3Value": "≥1500",
+      "spec3Unit": "cycles",
+      "cta": "Learn about eVTOL battery"
+    },
+    "lto": {
+      "flagshipLabel": "FLAGSHIP · 02",
+      "watermark": "L · T · O · B · A · T · T · E · R · Y",
+      "title1": "Redefining",
+      "title2": "the Rechargeable Cell",
+      "subtitle": "LTO small cylindrical · defense-grade · daily-life ready",
+      "description": "Defense-validated lithium titanate technology, reshaped into a standard AA-size replacement. One charge, 20,000+ cycles — enough to outlast the lifecycle of an AI robot or smart pet.",
+      "spec1Label": "CYCLES",
+      "spec1Value": "20K+",
+      "spec2Label": "TEMP",
+      "spec2Value": "−40°C",
+      "spec2Sub": "operating",
+      "spec3Label": "SAFETY",
+      "spec3Value": "0",
+      "spec3Sub": "lithium plating",
+      "sizeLabel": "SIZE",
+      "sizeValue": "AA · Φ14 · H50",
+      "chemistryLabel": "CHEMISTRY",
+      "chemistryValue": "LTO · Li₄Ti₅O₁₂",
+      "cta": "Learn about LTO battery"
+    },
+    "sodium": {
+      "label": "VANTAGE · 03",
+      "watermark": "N · a · - · i · o · n",
+      "title1": "Betting on",
+      "title2": "the Next Chemistry",
+      "p1": "While the industry consensus on sodium-ion forms behind BYD and CATL, Kingwood has built a full-chain capability — from materials with 985/211 university partners to in-house cells.",
+      "p2": "Today, our customer list includes several of China's leading sodium-ion pioneers.",
+      "moreLink": "View sodium-ion product portfolio",
+      "pillar1Title": "Academia × Industry",
+      "pillar1Desc": "Joint labs with top universities & material suppliers",
+      "pillar2Title": "Full-Chain Capability",
+      "pillar2Desc": "Materials · Cells · Modules · Packs",
+      "pillar3Title": "In Production",
+      "pillar3Desc": "Shipped to leading sodium-ion adopters",
+      "pillar4Title": "Customer Profile",
+      "pillar4Desc": "First-movers in sodium-ion deployment"
+    },
+    "applications": {
+      "eyebrow": "APPLICATIONS",
+      "title1": "Built for the most",
+      "title2": "demanding B2B markets",
+      "items": {
+        "lowAltitude": {
+          "number": "01",
+          "title": "Low-Altitude Economy",
+          "titleEn": "LOW-ALTITUDE ECONOMY",
+          "desc": "eVTOL · Industrial UAV · Aviation backup"
+        },
+        "defense": {
+          "number": "02",
+          "title": "Defense & Specialty",
+          "titleEn": "DEFENSE & SPECIALTY",
+          "desc": "Military supply · Extreme-cold · Emergency"
+        },
+        "industrial": {
+          "number": "03",
+          "title": "Industrial Vehicles",
+          "titleEn": "INDUSTRIAL VEHICLES",
+          "desc": "Forklifts · Sweepers · AGV"
+        },
+        "commercial": {
+          "number": "04",
+          "title": "Commercial Transport",
+          "titleEn": "COMMERCIAL TRANSPORT",
+          "desc": "EV buses · Low-speed EVs · Golf carts"
+        },
+        "storage": {
+          "number": "05",
+          "title": "Storage & Backup",
+          "titleEn": "STORAGE & BACKUP",
+          "desc": "C&I storage · RV · Outdoor power"
+        },
+        "telecom": {
+          "number": "06",
+          "title": "Telecom & Data",
+          "titleEn": "TELECOM & DATA",
+          "desc": "1U/3U backup · Base stations · Data centers"
+        }
+      },
+      "cta": "View all applications"
+    },
+    "cta": {
+      "eyebrow": "GET IN TOUCH",
+      "title1": "Let's build",
+      "title2": "what's",
+      "titleHighlight": "next",
+      "description": "Whether you're sourcing a reliable industrial battery partner, or aiming to ride the front edge of the low-altitude economy — Kingwood is ready.",
+      "ctaPrimary": "Start a conversation",
+      "ctaSecondary": "Download brochure",
+      "phone": "PHONE",
+      "phoneValue": "+86 20-38216943",
+      "email": "EMAIL",
+      "emailValue": "020k@vip.com",
+      "location": "LOCATION",
+      "locationValue": "Guangzhou · Meizhou"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "ABOUT KINGWOOD",
+      "title1": "Three decades.",
+      "title2": "One focus.",
+      "subtitle": "三十年专注一件事",
+      "description": "Since 1995, Kingwood has focused on one thing — engineering batteries for the most demanding environments. From military supply to aviation power, we exist for applications that cannot fail."
+    },
+    "intro": {
+      "eyebrow": "COMPANY",
+      "title1": "Guangdong Kingwood",
+      "title2": "Electronic Co., Ltd.",
+      "p1": "Founded in 1995 and headquartered in Meizhou, Guangdong, Kingwood is a battery manufacturer with 30 years of expertise, producing the KINGWOOD-branded product line.",
+      "p2": "The company operates 0.5 GWh of annual capacity across five battery chemistries — lithium titanate (LTO), lithium iron phosphate (LFP), nickel-manganese-cobalt (NMC), lithium manganese oxide (LMO), and sodium-ion — a rare multi-chemistry profile in the Chinese cell industry.",
+      "p3": "Kingwood serves B2B customers exclusively across six verticals: low-altitude economy, defense & specialty, industrial vehicles, commercial transport, energy storage, and telecom/data. Our customer roster includes leading Chinese eVTOL OEMs, defense research institutes, and industrial equipment manufacturers."
+    },
+    "timeline": {
+      "eyebrow": "MILESTONES",
+      "title": "Three decades of progress",
+      "items": [
+        {
+          "year": "1995",
+          "title": "Founded",
+          "desc": "Guangdong Kingwood Electronic Co., Ltd. established in Meizhou, Guangdong — the beginning of three decades in battery manufacturing."
+        },
+        {
+          "year": "2005",
+          "title": "Defense Supply Qualified",
+          "desc": "Qualified as an approved supplier for specialty defense equipment, marking entry into military-grade battery applications."
+        },
+        {
+          "year": "2015",
+          "title": "LTO Breakthrough",
+          "desc": "Successfully developed LTO cells with 20,000+ cycle life and stable operation at −40°C — a leadership position in extreme-environment chemistry."
+        },
+        {
+          "year": "2018",
+          "title": "Guangzhou Marketing Center",
+          "desc": "Marketing center established in Tianhe District, Guangzhou, accelerating B2B market reach across China."
+        },
+        {
+          "year": "2022",
+          "title": "eVTOL Program Launch",
+          "desc": "Initiated high-energy-density aviation cell development to address China's low-altitude economy national strategy."
+        },
+        {
+          "year": "2024",
+          "title": "eVTOL Commercial Delivery",
+          "desc": "KW-eVTOL-01 achieved volume shipments exceeding one million units — placing Kingwood among the first wave of commercialized eVTOL battery suppliers."
+        },
+        {
+          "year": "2025",
+          "title": "Sodium-Ion Frontier",
+          "desc": "Completed full-chain sodium-ion industrial capability and entered the supply systems of China's leading sodium-ion adopters."
+        }
+      ]
+    },
+    "credentials": {
+      "eyebrow": "CREDENTIALS",
+      "title1": "Hard credentials.",
+      "title2": "Hard metrics.",
+      "items": [
+        {
+          "label": "QUALITY",
+          "title": "IATF 16949",
+          "desc": "Automotive quality management system"
+        },
+        {
+          "label": "ENTERPRISE",
+          "title": "National High-Tech Enterprise",
+          "desc": "Certified by the Chinese government"
+        },
+        {
+          "label": "DEFENSE",
+          "title": "Military-Qualified Supplier",
+          "desc": "Approved supplier for specialty defense equipment"
+        },
+        {
+          "label": "IP",
+          "title": "24 IP rights",
+          "desc": "2 invention · 19 utility · 3 design patents"
+        }
+      ]
+    }
+  },
+  "evtol": {
+    "hero": {
+      "eyebrow": "FLAGSHIP · 01  /  eVTOL AVIATION BATTERY",
+      "model": "KW-eVTOL-01",
+      "title1": "Power for the",
+      "title2": "low-altitude",
+      "titleHighlight": "economy",
+      "subtitle": "AVIATION-GRADE LITHIUM BATTERY",
+      "description": "A high-energy-density pouch cell designed for eVTOL, industrial UAVs, and aviation power systems. Commercially deployed at scale, with over one million units shipped."
+    },
+    "spec": {
+      "eyebrow": "KEY SPECIFICATIONS",
+      "title": "Key specifications",
+      "items": [
+        { "label": "ENERGY DENSITY", "value": "≥330", "unit": "Wh/kg", "desc": "Gravimetric energy density" },
+        { "label": "POWER", "value": "≥8C", "unit": "discharge", "desc": "Sustained high-rate discharge" },
+        { "label": "CYCLE LIFE", "value": "≥1500", "unit": "cycles", "desc": "≥80% capacity retention" },
+        { "label": "PULSE", "value": "≥15C", "unit": "pulse", "desc": "10s pulse discharge rate" }
+      ]
+    },
+    "why": {
+      "eyebrow": "WHY KINGWOOD",
+      "title1": "Why choose",
+      "title2": "Kingwood eVTOL cells",
+      "items": [
+        {
+          "number": "01",
+          "title": "Commercially deployed",
+          "desc": "One million units shipped is the final validation. Kingwood eVTOL cells have passed OEM-level audits and entered stable mass production."
+        },
+        {
+          "number": "02",
+          "title": "Energy + power, together",
+          "desc": "≥330 Wh/kg combined with ≥8C sustained discharge — a leading position in the Chinese market, meeting both endurance and peak takeoff power."
+        },
+        {
+          "number": "03",
+          "title": "30 years of manufacturing",
+          "desc": "From military supply to aviation power, three decades of process discipline is the foundation of aviation-grade consistency and reliability."
+        }
+      ]
+    },
+    "scenario": {
+      "eyebrow": "APPLICATIONS",
+      "title": "Target applications",
+      "items": [
+        "Manned eVTOL primary propulsion",
+        "Long-endurance industrial UAVs",
+        "Aviation backup power systems",
+        "Specialty aerospace equipment"
+      ]
+    }
+  },
+  "lto": {
+    "hero": {
+      "eyebrow": "FLAGSHIP · 02  /  LTO TECHNOLOGY",
+      "title1": "Lithium titanate",
+      "title2": "born for extremes",
+      "subtitle": "LITHIUM TITANATE  ·  BORN FOR EXTREMES",
+      "description": "Lithium titanate (LTO) redefines what a rechargeable cell can endure — 20,000+ cycle life and stable operation at −40°C, with intrinsic safety against lithium plating."
+    },
+    "spec": {
+      "eyebrow": "KEY SPECIFICATIONS",
+      "title": "Key specifications",
+      "items": [
+        { "label": "CYCLES", "value": "20,000+", "unit": "cycles", "desc": "Ultra-long cycle life" },
+        { "label": "TEMP", "value": "−40°C", "unit": "operating", "desc": "−68°C extreme operating limit" },
+        { "label": "FAST CHARGE", "value": "8C", "unit": "rate", "desc": "Sustained high-rate fast charge" },
+        { "label": "SAFETY", "value": "0", "unit": "plating", "desc": "Intrinsic zero lithium plating" }
+      ]
+    },
+    "advantage": {
+      "eyebrow": "WHY LTO",
+      "title1": "Why",
+      "title2": "lithium titanate",
+      "items": [
+        {
+          "title": "Extreme temperatures",
+          "desc": "Stable capacity at −40°C and operational at −68°C. The chemistry of choice for cold-region equipment, high-altitude, and polar applications."
+        },
+        {
+          "title": "Ultra-long life",
+          "desc": "20,000+ cycles — over 10× the lifetime of conventional lithium-ion in the same duty cycle. Significantly lower total cost of ownership."
+        },
+        {
+          "title": "Intrinsic safety",
+          "desc": "LTO negative electrode forms no SEI layer, no lithium plating, no thermal runaway sensitivity. The safety baseline for defense and emergency power."
+        },
+        {
+          "title": "Fast charging",
+          "desc": "8C sustained fast charging means a full recharge in 7~8 minutes. No need to compromise operational efficiency for charging time."
+        }
+      ]
+    },
+    "applications": {
+      "eyebrow": "APPLICATIONS",
+      "title": "Typical applications",
+      "items": [
+        "Defense supply · specialty power systems",
+        "Industrial equipment in cold regions",
+        "Emergency power · backup starting",
+        "AI robots · smart pets",
+        "High-frequency fast-charge industrial vehicles"
+      ]
+    }
+  },
+  "sodium": {
+    "hero": {
+      "eyebrow": "VANTAGE · 03  /  SODIUM-ION",
+      "title1": "Betting on",
+      "title2": "the next chemistry",
+      "subtitle": "SODIUM-ION · THE NEXT FRONTIER",
+      "description": "Sodium-ion is the next-generation chemistry for storage and low-speed power. Kingwood has built a full-chain capability ahead of the curve, working alongside universities, material suppliers, and lead customers."
+    },
+    "spec": {
+      "eyebrow": "KEY SPECIFICATIONS",
+      "title": "Sodium-ion key specs",
+      "items": [
+        { "label": "CYCLES", "value": "≥2000", "unit": "cycles", "desc": "Long-life cycling" },
+        { "label": "POWER", "value": "20C", "unit": "continuous", "desc": "Ultra high-rate discharge" },
+        { "label": "TEMP", "value": "−40°C", "unit": "discharge", "desc": "Wide-temperature operation" },
+        { "label": "DENSITY", "value": "≥105", "unit": "Wh/kg", "desc": "Gravimetric energy density" }
+      ]
+    },
+    "why": {
+      "eyebrow": "STRATEGIC VANTAGE",
+      "title1": "Why",
+      "title2": "sodium-ion",
+      "p1": "Global lithium supply imbalance and price volatility have made sodium — abundant and cost-stable — the inevitable substitute in applications insensitive to energy density: storage, low-speed EVs, and backup power.",
+      "p2": "Kingwood's sodium-ion bet isn't trend-chasing — it's the result of years of materials and process accumulation, combined with deep partnerships across academia, upstream suppliers, and pioneer OEMs."
+    },
+    "pillars": {
+      "items": [
+        {
+          "number": "01",
+          "title": "Academia × Industry",
+          "desc": "Joint labs with 985/211 universities and partnerships with leading material suppliers."
+        },
+        {
+          "number": "02",
+          "title": "Full-chain capability",
+          "desc": "End-to-end control across materials, cells, modules, and pack systems."
+        },
+        {
+          "number": "03",
+          "title": "In production",
+          "desc": "Sodium-ion products shipping to leading customers in small-batch volume."
+        },
+        {
+          "number": "04",
+          "title": "Customer validation",
+          "desc": "Active customers include several of China's most advanced sodium-ion adopters."
+        }
+      ]
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "PRODUCTS  ·  CELL PORTFOLIO",
+      "title1": "8 cell formats.",
+      "title2": "Every demanding scene.",
+      "subtitle": "Customized Cells for Different Applications",
+      "description": "From high-energy pouch cells and ultra-high-power sodium-ion to cylindrical LTO — Kingwood's full cell matrix spans aviation, storage, defense, and industrial scenarios."
+    },
+    "filter": {
+      "all": "All",
+      "pouch": "Pouch",
+      "cylindrical": "Cylindrical",
+      "lto": "LTO",
+      "sodium": "Sodium-ion",
+      "nmc": "NMC"
+    },
+    "table": {
+      "model": "Model",
+      "format": "Format",
+      "chemistry": "Chemistry",
+      "capacity": "Capacity",
+      "voltage": "Voltage",
+      "density": "Energy density",
+      "cycles": "Cycles",
+      "tempRange": "Temp range",
+      "details": "View details"
+    },
+    "cells": [
+      {
+        "id": "kw-nmc-310",
+        "model": "KW-NMC-310",
+        "name": "310 Wh/kg pouch lithium-ion cell",
+        "format": "Pouch",
+        "chemistry": "NMC / Gr+SiOx",
+        "dimensions": "10.5 × 87 × 187 mm",
+        "capacity": "35.0 Ah",
+        "voltage": "3.6 V",
+        "density": "≥310 Wh/kg",
+        "cycles": "≥500",
+        "tempRange": "−20 ~ +60 °C",
+        "charge": "2.0C max continuous charge",
+        "discharge": "3.0C max continuous · 5.0C pulse",
+        "weight": "398 g"
+      },
+      {
+        "id": "kw-nmc-370",
+        "model": "KW-NMC-370",
+        "name": "370 Wh/kg pouch lithium-ion cell",
+        "format": "Pouch",
+        "chemistry": "NMC / Gr+SiC",
+        "dimensions": "12.5 × 70 × 170 mm",
+        "capacity": "30.0 Ah",
+        "voltage": "3.5 V",
+        "density": "≥370 Wh/kg",
+        "cycles": "≥500",
+        "tempRange": "−20 ~ +45 °C",
+        "charge": "0.5C max continuous charge",
+        "discharge": "5.0C max continuous · 10.0C pulse",
+        "weight": "280 g"
+      },
+      {
+        "id": "kw-nmc-390",
+        "model": "KW-NMC-390",
+        "name": "390 Wh/kg pouch lithium-ion cell",
+        "format": "Pouch",
+        "chemistry": "NMC / SiC+Gr",
+        "dimensions": "10.5 × 88 × 187 mm",
+        "capacity": "41.0 Ah",
+        "voltage": "3.5 V",
+        "density": "≥390 Wh/kg",
+        "cycles": "≥500",
+        "tempRange": "−20 ~ +45 °C",
+        "charge": "1.0C max continuous charge",
+        "discharge": "2.0C max continuous · 5.0C pulse",
+        "weight": "367 g"
+      },
+      {
+        "id": "kw-evtol-01",
+        "model": "KW-eVTOL-01",
+        "name": "410 Wh/kg eVTOL flagship cell",
+        "format": "Pouch",
+        "chemistry": "NMC / Gr+SiC",
+        "dimensions": "10.0 × 133 × 200 mm",
+        "capacity": "70.0 Ah",
+        "voltage": "3.4 V",
+        "density": "≥410 Wh/kg",
+        "cycles": "≥1500",
+        "tempRange": "−20 ~ +45 °C",
+        "charge": "0.5C max continuous charge",
+        "discharge": "≥8C continuous · ≥15C pulse",
+        "weight": "570 g",
+        "flagship": true
+      },
+      {
+        "id": "kw-na-7000",
+        "model": "KW-Na-7000",
+        "name": "Ultra-high-power sodium-ion cell",
+        "format": "Pouch",
+        "chemistry": "NFM / HC",
+        "dimensions": "7.0 × 82 × 190 mm",
+        "capacity": "7.0 Ah",
+        "voltage": "2.95 V",
+        "density": "≥105 Wh/kg",
+        "cycles": "≥2000",
+        "tempRange": "−40 ~ +60 °C",
+        "charge": "15C max continuous charge",
+        "discharge": "20C max continuous · 25C pulse",
+        "weight": "193 g"
+      },
+      {
+        "id": "kw-lto-14500",
+        "model": "KW-LTO-14500",
+        "name": "Fast-charge LTO cylindrical cell (AA)",
+        "format": "Cylindrical",
+        "chemistry": "LTO",
+        "dimensions": "Φ14 × 50 mm",
+        "capacity": "0.55 Ah",
+        "voltage": "1.7 V",
+        "density": "≥50 Wh/kg",
+        "cycles": "≥5000 (1C) · ≥2000 (8C)",
+        "tempRange": "−40 ~ +55 °C",
+        "charge": "8.0C max continuous charge",
+        "discharge": "8.0C continuous · 20C pulse",
+        "weight": "19 g",
+        "flagship": true
+      },
+      {
+        "id": "kw-18650-hp",
+        "model": "KW-18650-HP",
+        "name": "High-power 18650 cylindrical cell",
+        "format": "Cylindrical",
+        "chemistry": "NCA / Gr+SiOx",
+        "dimensions": "Φ18 × 65 mm",
+        "capacity": "2.9 Ah",
+        "voltage": "3.6 V",
+        "density": "≥220 Wh/kg",
+        "cycles": "≥1000 (1C/1C)",
+        "tempRange": "−60 ~ +60 °C",
+        "charge": "3.0C max continuous charge",
+        "discharge": "12C continuous · 20C pulse",
+        "weight": "46 g"
+      },
+      {
+        "id": "kw-21700-wt",
+        "model": "KW-21700-WT",
+        "name": "Wide-temperature 21700 tabless cell",
+        "format": "Cylindrical",
+        "chemistry": "NCM / Gr+SiOx",
+        "dimensions": "Φ21 × 70 mm",
+        "capacity": "5.0 Ah",
+        "voltage": "3.6 V",
+        "density": "≥250 Wh/kg",
+        "cycles": "≥1000 (1C/1C)",
+        "tempRange": "−60 ~ +60 °C",
+        "charge": "5C max continuous charge",
+        "discharge": "15C continuous · 30C pulse",
+        "weight": "70 g"
+      }
+    ]
+  },
+  "applications": {
+    "hero": {
+      "eyebrow": "APPLICATIONS  ·  SIX FRONTIERS",
+      "title1": "Built for the most",
+      "title2": "demanding B2B markets",
+      "subtitle": "六大场景 · 服务最严苛的 B 端市场",
+      "description": "From manned aircraft at thousands of meters, to defense equipment at −40°C, from urban transit to data center backup — Kingwood's portfolio covers six demanding B2B verticals."
+    },
+    "lowAltitude": {
+      "title": "Low-Altitude Economy",
+      "titleEn": "低空经济",
+      "lead": "Cell supplier to China's trillion-yuan national strategy.",
+      "p1": "Manned eVTOLs, industrial UAVs, and aviation backup demand aviation-grade specifications — high energy density, high discharge rate, strict consistency, and safety redundancy.",
+      "p2": "KW-eVTOL-01 has shipped over one million units commercially, with established partnerships with leading Chinese eVTOL OEMs.",
+      "scenarios": [
+        "Manned eVTOL primary propulsion",
+        "Long-endurance industrial UAVs",
+        "Onboard backup power systems",
+        "Aviation starting · emergency power"
+      ],
+      "products": ["KW-eVTOL-01", "KW-NMC-390", "KW-NMC-370"]
+    },
+    "defense": {
+      "title": "Defense & Specialty",
+      "titleEn": "特种装备",
+      "lead": "Qualified supplier of specialty defense equipment.",
+      "p1": "Military and defense applications demand the strictest standards: stable output at extreme temperatures, zero thermal runaway, ultra-long service life.",
+      "p2": "Kingwood LTO cells operate at −40°C nominally (−68°C at limit), deliver 20,000+ cycles with intrinsic zero lithium plating — the chemistry of choice for cold-region equipment, emergency power, and specialty aerospace.",
+      "scenarios": [
+        "Cold-region combat equipment",
+        "Specialty emergency power",
+        "Military communications & reconnaissance",
+        "Specialty aerospace equipment"
+      ],
+      "products": ["KW-LTO-14500", "KW-21700-WT", "KW-18650-HP"]
+    },
+    "industrial": {
+      "title": "Industrial Vehicles",
+      "titleEn": "工业车辆",
+      "lead": "Fast charging and long cycle life — the core of industrial uptime.",
+      "p1": "Forklifts, sweepers, and AGVs operate in multi-shift duty cycles. Battery fast-charge capability and cycle life directly determine operational cost.",
+      "p2": "KW-LTO-14500's 8C fast charging and 20,000+ cycle life eliminate the wait time, lowering lifetime cost across the fleet.",
+      "scenarios": [
+        "Electric forklifts",
+        "Industrial sweepers",
+        "AGV (automated guided vehicles)",
+        "Port and airport ground support equipment"
+      ],
+      "products": ["KW-LTO-14500", "KW-NMC-310"]
+    },
+    "commercial": {
+      "title": "Commercial Transport",
+      "titleEn": "商用交通",
+      "lead": "Stable power for low-speed EVs and short-haul commercial vehicles.",
+      "p1": "Electric buses, low-speed EVs, and golf carts prioritize low cost, long life, and stable output — not extreme energy density.",
+      "p2": "Kingwood's multi-chemistry portfolio enables flexible NMC / LFP / LTO configuration per application, balancing range, cycle life, and cost.",
+      "scenarios": [
+        "Electric buses",
+        "Low-speed EVs",
+        "Golf carts & sightseeing vehicles",
+        "Short-haul urban logistics"
+      ],
+      "products": ["KW-NMC-310", "KW-LTO-14500"]
+    },
+    "storage": {
+      "title": "Storage & Backup",
+      "titleEn": "储能与备用",
+      "lead": "Full-scenario solutions for C&I storage, outdoor power, and RV.",
+      "p1": "Storage applications are insensitive to energy density but highly sensitive to cycle life, cost, and safety.",
+      "p2": "Kingwood sodium-ion delivers generational advantages in cycle life, wide-temperature operation, and cost — the core chemistry for next-generation storage and backup.",
+      "scenarios": [
+        "Commercial & industrial storage",
+        "RV and outdoor power",
+        "Residential storage",
+        "Integrated solar+storage systems"
+      ],
+      "products": ["KW-Na-7000", "KW-LTO-14500"]
+    },
+    "telecom": {
+      "title": "Telecom & Data",
+      "titleEn": "通信与数据",
+      "lead": "Reliable backup for telecom base stations and data centers.",
+      "p1": "Telecom base stations and data centers demand exceptional cycle life, temperature tolerance, and long-term reliability from backup systems.",
+      "p2": "Kingwood's 1U/3U standard modular backup solutions, combined with LTO and LFP chemistries, cover everything from base stations to large data centers.",
+      "scenarios": [
+        "Telecom base station backup",
+        "Data center UPS backup",
+        "1U / 3U rack-mount power modules",
+        "Edge compute node power"
+      ],
+      "products": ["KW-LTO-14500", "KW-21700-WT"]
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "GET IN TOUCH",
+      "title1": "Let's build",
+      "title2": "what's",
+      "titleHighlight": "next",
+      "subtitle": "期待与您开启合作",
+      "description": "Whether you're sourcing a reliable industrial battery partner, or aiming to ride the front edge of the low-altitude economy — Kingwood is ready."
+    },
+    "form": {
+      "title": "Start a conversation",
+      "subtitle": "We'll respond within one business day.",
+      "name": "Your name",
+      "company": "Company / organization",
+      "title_": "Title",
+      "phone": "Phone",
+      "email": "Email",
+      "applicationLabel": "Application area",
+      "applicationOptions": [
+        "Low-altitude economy / eVTOL",
+        "Defense & specialty",
+        "Industrial vehicles",
+        "Commercial transport",
+        "Storage & backup",
+        "Telecom & data",
+        "Other"
+      ],
+      "message": "Briefly describe your needs",
+      "submit": "Send inquiry",
+      "privacy": "Your information will only be used for business contact and will never be shared."
+    },
+    "info": {
+      "title": "Contact us directly",
+      "factory": {
+        "label": "FACTORY",
+        "title": "Meizhou Factory",
+        "address": "Zone AD2, Dongsheng Industrial Park, Meizhou Economic Development Zone, Guangdong, China",
+        "phone": "+86 753-2228018"
+      },
+      "marketing": {
+        "label": "MARKETING",
+        "title": "Guangzhou Marketing Center",
+        "address": "5F, Building C, Dadi Industrial Zone, Tangxia Yongdong Road, Tianhe District, Guangzhou, China",
+        "phone": "+86 20-38216943"
+      },
+      "email": {
+        "label": "EMAIL",
+        "value": "020k@vip.com"
+      },
+      "web": {
+        "label": "WEB",
+        "value": "www.020k.com"
+      }
+    }
+  },
+  "footer": {
+    "brand": "Guangdong Kingwood Electronic Co., Ltd.",
+    "tagline": "Three decades of expertise. From defense supply to aviation-grade power — KINGWOOD engineers batteries for the most demanding applications.",
+    "company": "Company",
+    "products": "Products",
+    "applications": "Applications",
+    "contact": "Contact",
+    "factory": "Factory: Meizhou, Guangdong",
+    "marketing": "Marketing: Tianhe, Guangzhou",
+    "copyright": "© 2025 Guangdong Kingwood Electronic Co., Ltd.",
+    "icp": "粤 ICP 备 XXXXXXXX 号"
+  }
+}

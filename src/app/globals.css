@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ 字体导入 ============ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-serif: 'Cormorant Garamond', 'Noto Serif SC';
+  --font-sans: 'Inter', 'Noto Sans SC';
+  --font-mono: 'JetBrains Mono';
+
+  /* 设计 token */
+  --color-teal: #14B8B0;
+  --color-navy: #0A2540;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F7F8FA;
+  --color-ink: #0A0E14;
+  --color-ink-soft: #5C6778;
+  --color-line: #EDEFF3;
+}
+
+/* ============ 基础样式 ============ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  color: var(--color-ink);
+  background: var(--color-bg);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* 中文标题用思源宋体，英文标题用 Cormorant，自动判断 */
+.font-serif {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  font-feature-settings: 'palt' 1;
+}
+
+/* ============ 选中高亮 ============ */
+::selection {
+  background: var(--color-teal);
+  color: white;
+}
+
+/* ============ 滚动条 ============ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: #D9DDE5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5BCC9;
+}
+
+/* ============ 工具类 ============ */
+/* eyebrow: 小标签，uppercase + 大字距 */
+.eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+/* 数字展示：等距字体 */
+.numeric {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 标题中的青色高亮关键词 */
+.accent {
+  color: var(--color-teal);
+}
+
+/* 内容容器 */
+.container-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* 大留白 section */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+/* 细分割线 */
+.divider-thin {
+  border-top: 1px solid var(--color-line);
+}
+
+/* navy section 的暗色 eyebrow */
+.eyebrow-dark {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 链接下划线动画 */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* 按钮基础样式 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--color-teal);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+  background: #109690;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+}
+
+.btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+.btn-ghost-dark:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+}
+
+/* 滚动浮现 */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 网格图案背景（hero 区可选） */
+.bg-grid-faint {
+  background-image:
+    linear-gradient(to right, rgba(20, 184, 176, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 184, 176, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* 大尺寸竖排水印文字（参考效果图的 LTO·BATTERY 竖排水印） */
+.vertical-watermark {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  color: var(--color-ink-soft);
+  opacity: 0.15;
+  font-weight: 500;
+}

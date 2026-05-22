@@ -1,0 +1,87 @@
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { Logo } from './Logo';
+
+export function Footer() {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('nav');
+
+  // 四列链接
+  const columns = [
+    {
+      title: t('company'),
+      links: [
+        { href: '/about' as const, label: tNav('about') },
+      ],
+    },
+    {
+      title: t('products'),
+      links: [
+        { href: '/evtol' as const, label: tNav('evtol') },
+        { href: '/lto' as const, label: tNav('lto') },
+        { href: '/sodium-ion' as const, label: tNav('sodium') },
+        { href: '/products' as const, label: tNav('products') },
+      ],
+    },
+    {
+      title: t('applications'),
+      links: [
+        { href: '/applications' as const, label: tNav('applications') },
+      ],
+    },
+    {
+      title: t('contact'),
+      links: [
+        { href: '/contact' as const, label: tNav('contact') },
+      ],
+    },
+  ];
+
+  return (
+    <footer className="bg-ink-900 text-white">
+      <div className="container-content py-20 lg:py-24">
+        {/* 上半：品牌 + 四列 */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+          {/* 品牌区 */}
+          <div className="lg:col-span-5">
+            <Logo variant="light" />
+            <p className="mt-6 text-sm leading-relaxed text-white/60 max-w-md">
+              {t('tagline')}
+            </p>
+            <div className="mt-8 space-y-2 text-xs text-white/40">
+              <p>{t('factory')}</p>
+              <p>{t('marketing')}</p>
+            </div>
+          </div>
+
+          {/* 四列链接 */}
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {columns.map((col) => (
+              <div key={col.title}>
+                <h4 className="eyebrow text-white/40 mb-4">{col.title}</h4>
+                <ul className="space-y-3">
+                  {col.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-white/80 hover:text-teal-400 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 下半：版权 + ICP */}
+        <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <p className="text-xs text-white/40">{t('copyright')}</p>
+          <p className="text-xs text-white/30">{t('icp')}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

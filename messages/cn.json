@@ -1,0 +1,755 @@
+{
+  "common": {
+    "contactForSpecs": "联系销售获取详细规格",
+    "downloadDatasheet": "下载产品规格书",
+    "viewDetails": "查看详情",
+    "exploreMore": "了解更多",
+    "backToTop": "回到顶部",
+    "allApplications": "ALL APPLICATIONS",
+    "context": "应用背景与挑战",
+    "scenarios": "典型应用场景",
+    "recommendedProducts": "推荐产品",
+    "viewModel": "查看型号"
+  },
+  "meta": {
+    "siteName": "KINGWOOD 金华达",
+    "siteDescription": "广东金华达电子有限公司 — 30年专业电池制造商，专注 eVTOL 航空电池、钛酸锂、钠离子等多体系电池技术，服务低空经济与特种装备等高端 B 端市场。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "evtol": "eVTOL",
+    "lto": "钛酸锂",
+    "sodium": "钠离子",
+    "products": "产品",
+    "applications": "应用",
+    "contact": "联系销售",
+    "cta": "联系销售"
+  },
+  "brand": {
+    "name": "KINGWOOD",
+    "subName": "金华达",
+    "tagline": "让飞行更可靠，让能量更长寿",
+    "taglineEn": "Powering the Skies. Lasting the Distance.",
+    "subTagline": "创新有「锂」 · 绿色同行",
+    "subTaglineEn": "Innovation with Lithium · Green Together"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "EST. 1995  /  30 YEARS OF EXPERTISE",
+      "titleLine1": "让飞行更",
+      "titleHighlight1": "可靠",
+      "titleLine2": "让能量更",
+      "titleHighlight2": "长寿",
+      "subtitle": "Powering the Skies. Lasting the Distance.",
+      "description": "三十年制造积淀，五大电池化学体系，从军工特种装备到低空经济航空动力，为最严苛的应用场景提供可靠的能量。",
+      "ctaPrimary": "探索 eVTOL",
+      "ctaSecondary": "了解金华达",
+      "scroll": "SCROLL"
+    },
+    "stats": {
+      "heritage": {
+        "value": "30",
+        "suffix": "年",
+        "label": "专业积淀",
+        "eyebrow": "01 / HERITAGE"
+      },
+      "capacity": {
+        "value": "0.5",
+        "suffix": "GWh",
+        "label": "当前年产能",
+        "eyebrow": "02 / CAPACITY"
+      },
+      "chemistry": {
+        "value": "5",
+        "suffix": "",
+        "label": "电池化学体系",
+        "eyebrow": "03 / CHEMISTRY"
+      },
+      "quality": {
+        "value": "IATF 16949",
+        "suffix": "",
+        "label": "汽车行业质量认证",
+        "eyebrow": "04 / QUALITY"
+      }
+    },
+    "evtol": {
+      "flagshipLabel": "FLAGSHIP · 01",
+      "modelLabel": "P / N",
+      "modelNumber": "KW-eVTOL-01",
+      "moduleLabel": "eVTOL · AVIATION BATTERY MODULE",
+      "title1": "为低空经济",
+      "title2": "提供动力",
+      "subtitle": "eVTOL 航空电池 · 已实现商业化交付",
+      "description": "独立完成研发与量产，目前已稳定交付百万级订单。在万亿级国家战略赛道一线交付落地，金华达已完成关键卡位，是国内极少数已迈入商业化阶段的电池企业。",
+      "spec1Label": "ENERGY",
+      "spec1Value": "≥330",
+      "spec1Unit": "Wh/kg",
+      "spec2Label": "POWER",
+      "spec2Value": "≥8C",
+      "spec2Unit": "放电倍率",
+      "spec3Label": "CYCLES",
+      "spec3Value": "≥1500",
+      "spec3Unit": "cycles",
+      "cta": "了解 eVTOL 航空电池"
+    },
+    "lto": {
+      "flagshipLabel": "FLAGSHIP · 02",
+      "watermark": "L · T · O · B · A · T · T · E · R · Y",
+      "title1": "重新定义",
+      "title2": "可充电电池",
+      "subtitle": "钛酸锂小圆柱 · 军工技术 · 进入日常生活",
+      "description": "把通过国防标准验证的钛酸锂技术，做成可替代普通 5 号电池的小圆柱形态。一次充满、循环上万次——足以陪伴一台 AI 机器人或智能宠物完整一生命周期。",
+      "spec1Label": "CYCLES",
+      "spec1Value": "20K+",
+      "spec2Label": "TEMP",
+      "spec2Value": "−40°C",
+      "spec2Sub": "极寒下正常",
+      "spec3Label": "SAFETY",
+      "spec3Value": "0",
+      "spec3Sub": "析锂风险",
+      "sizeLabel": "SIZE",
+      "sizeValue": "AA · Φ14 · H50",
+      "chemistryLabel": "CHEMISTRY",
+      "chemistryValue": "LTO · Li₄Ti₅O₁₂",
+      "cta": "了解钛酸锂电池"
+    },
+    "sodium": {
+      "label": "VANTAGE · 03",
+      "watermark": "N · a · - · i · o · n",
+      "title1": "押注",
+      "title2": "下一代电池",
+      "p1": "在比亚迪、宁德时代仍稳健占据钠电赛道之时，行业共识已经形成。金华达带头跑到园区前列，独自完成了高校与材料企业完成全链条技术布局。",
+      "p2": "今天，我们的客户名单中已经包含了多家国内钠电领域最前沿的企业。",
+      "moreLink": "查看对前沿钠电储备产品布局",
+      "pillar1Title": "产学研协同",
+      "pillar1Desc": "联合材料企业与 985/211 高校 · 电芯",
+      "pillar2Title": "全链条自主",
+      "pillar2Desc": "实验线 · 量产线 · 电芯 · 电池",
+      "pillar3Title": "已实现量产",
+      "pillar3Desc": "客户已规模化交付",
+      "pillar4Title": "客户行业",
+      "pillar4Desc": "头部钠电先行企业"
+    },
+    "applications": {
+      "eyebrow": "APPLICATIONS · 应用领域",
+      "title1": "服务最严苛的",
+      "title2": "B 端市场",
+      "items": {
+        "lowAltitude": {
+          "number": "01",
+          "title": "低空经济",
+          "titleEn": "LOW-ALTITUDE ECONOMY",
+          "desc": "eVTOL · 工业无人机 · 航空备用电源"
+        },
+        "defense": {
+          "number": "02",
+          "title": "特种装备",
+          "titleEn": "DEFENSE & SPECIALTY",
+          "desc": "军品配套 · 极寒装备 · 应急电源"
+        },
+        "industrial": {
+          "number": "03",
+          "title": "工业车辆",
+          "titleEn": "INDUSTRIAL VEHICLES",
+          "desc": "电动叉车 · 扫地车 · AGV"
+        },
+        "commercial": {
+          "number": "04",
+          "title": "商用交通",
+          "titleEn": "COMMERCIAL TRANSPORT",
+          "desc": "电动公交 · 低速车 · 高尔夫球车"
+        },
+        "storage": {
+          "number": "05",
+          "title": "储能与备用",
+          "titleEn": "STORAGE & BACKUP",
+          "desc": "工商业储能 · 房车 · 户外电源"
+        },
+        "telecom": {
+          "number": "06",
+          "title": "通信与数据",
+          "titleEn": "TELECOM & DATA",
+          "desc": "1U/3U 备用 · 通信基站 · 数据中心"
+        }
+      },
+      "cta": "浏览全部应用"
+    },
+    "cta": {
+      "eyebrow": "GET IN TOUCH",
+      "title1": "期待与您",
+      "title2": "开启",
+      "titleHighlight": "合作",
+      "description": "不论您是寻找稳定可靠的工业电池伙伴，还是希望在未来低空经济的战略前沿同行 — 金华达准备好了。",
+      "ctaPrimary": "提交合作意向",
+      "ctaSecondary": "下载产品资料",
+      "phone": "PHONE",
+      "phoneValue": "020-38216943",
+      "email": "EMAIL",
+      "emailValue": "020k@vip.com",
+      "location": "LOCATION",
+      "locationValue": "广州 · 梅州"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "ABOUT KINGWOOD",
+      "title1": "三十年",
+      "title2": "专注一件事",
+      "subtitle": "ONE FOCUS · THREE DECADES",
+      "description": "从 1995 年至今，金华达只做一件事 — 把电池做到极致。从早期军工配套到今日航空动力，我们始终为最严苛的应用场景而生。"
+    },
+    "intro": {
+      "eyebrow": "COMPANY · 公司简介",
+      "title1": "广东金华达",
+      "title2": "电子有限公司",
+      "p1": "广东金华达电子有限公司成立于 1995 年，总部位于广东梅州，是一家拥有 30 年专业积淀的电池制造商，主营 KINGWOOD 品牌系列电池产品。",
+      "p2": "公司现拥有 0.5 GWh 年产能，覆盖钛酸锂（LTO）、磷酸铁锂（LFP）、三元锂（NMC）、锰酸锂（LMO）以及钠离子（Na-ion）共五大化学体系，是国内少数实现多体系并行量产的电池企业。",
+      "p3": "金华达专注 B 端市场，服务低空经济、特种装备、工业车辆、商用交通、储能备用、通信数据六大领域。客户名单覆盖国内多家头部 eVTOL 整机厂、军工科研单位和工业装备制造商。"
+    },
+    "timeline": {
+      "eyebrow": "MILESTONES · 发展历程",
+      "title": "三十年的脚步",
+      "items": [
+        {
+          "year": "1995",
+          "title": "公司成立",
+          "desc": "广东金华达电子有限公司在广东梅州成立，开启电池制造业之路。"
+        },
+        {
+          "year": "2005",
+          "title": "进入军品配套",
+          "desc": "通过特种装备合格供应商资质审核，开始为军工领域提供电池配套产品。"
+        },
+        {
+          "year": "2015",
+          "title": "钛酸锂技术突破",
+          "desc": "成功研发 20,000+ 次循环、−40°C 常温表现的 LTO 电池，实现极端环境技术领先。"
+        },
+        {
+          "year": "2018",
+          "title": "广州营销中心成立",
+          "desc": "在广州天河区设立营销中心，加速国内 B 端市场开拓与服务响应。"
+        },
+        {
+          "year": "2022",
+          "title": "eVTOL 航空电池立项",
+          "desc": "针对低空经济国家战略赛道，启动高能量密度航空电池研发。"
+        },
+        {
+          "year": "2024",
+          "title": "eVTOL 商业化交付",
+          "desc": "KW-eVTOL-01 实现批量交付，累计出货突破百万级，正式进入低空经济先发梯队。"
+        },
+        {
+          "year": "2025",
+          "title": "钠离子前沿布局",
+          "desc": "完成钠电全链条产业布局，进入国内头部钠电客户供应体系。"
+        }
+      ]
+    },
+    "credentials": {
+      "eyebrow": "CREDENTIALS · 资质认证",
+      "title1": "硬资质",
+      "title2": "硬指标",
+      "items": [
+        {
+          "label": "QUALITY",
+          "title": "IATF 16949",
+          "desc": "汽车行业质量管理体系认证"
+        },
+        {
+          "label": "ENTERPRISE",
+          "title": "国家高新技术企业",
+          "desc": "国家认定的高新技术企业资质"
+        },
+        {
+          "label": "DEFENSE",
+          "title": "军品合格供应商",
+          "desc": "特种装备合格供应商资质"
+        },
+        {
+          "label": "IP",
+          "title": "24 项知识产权",
+          "desc": "2 项发明 · 19 项实用新型 · 3 项外观"
+        }
+      ]
+    }
+  },
+  "evtol": {
+    "hero": {
+      "eyebrow": "FLAGSHIP · 01  /  eVTOL AVIATION BATTERY",
+      "model": "KW-eVTOL-01",
+      "title1": "为低空经济",
+      "title2": "提供",
+      "titleHighlight": "动力",
+      "subtitle": "AVIATION-GRADE LITHIUM BATTERY",
+      "description": "面向 eVTOL、工业无人机及航空动力市场设计的高能量密度软包电芯。已实现商业化交付，累计出货突破百万级。"
+    },
+    "spec": {
+      "eyebrow": "KEY SPECIFICATIONS",
+      "title": "关键参数",
+      "items": [
+        { "label": "ENERGY DENSITY", "value": "≥330", "unit": "Wh/kg", "desc": "重量能量密度" },
+        { "label": "POWER", "value": "≥8C", "unit": "放电倍率", "desc": "持续大倍率放电" },
+        { "label": "CYCLE LIFE", "value": "≥1500", "unit": "cycles", "desc": "≥80% 容量保持" },
+        { "label": "PULSE", "value": "≥15C", "unit": "脉冲", "desc": "10s 脉冲倍率" }
+      ]
+    },
+    "why": {
+      "eyebrow": "WHY KINGWOOD",
+      "title1": "为何选择",
+      "title2": "金华达 eVTOL 电池",
+      "items": [
+        {
+          "number": "01",
+          "title": "已商业化",
+          "desc": "百万级出货是验证的最终标准。金华达 eVTOL 电池已通过头部整机厂复核与产线验证，进入稳定量产阶段。"
+        },
+        {
+          "number": "02",
+          "title": "高能量 + 高倍率",
+          "desc": "≥330 Wh/kg 与 ≥8C 持续放电的组合，在国内同类电池中处于领先水平，可同时满足续航与瞬时大功率起降需求。"
+        },
+        {
+          "number": "03",
+          "title": "30 年制造积淀",
+          "desc": "从军工配套到航空动力，30 年的电池制造工艺积累，是保证航空级一致性与可靠性的根本。"
+        }
+      ]
+    },
+    "scenario": {
+      "eyebrow": "APPLICATIONS",
+      "title": "目标应用场景",
+      "items": [
+        "载人 eVTOL 整机动力电池",
+        "工业级长航时无人机",
+        "航空备用电源系统",
+        "特种航空装备"
+      ]
+    }
+  },
+  "lto": {
+    "hero": {
+      "eyebrow": "FLAGSHIP · 02  /  LTO TECHNOLOGY",
+      "title1": "钛酸锂",
+      "title2": "为极端而生",
+      "subtitle": "LITHIUM TITANATE  ·  BORN FOR EXTREMES",
+      "description": "钛酸锂（LTO）以 20,000+ 次超长循环和 −40°C 极寒下的稳定表现，重新定义可充电电池的服役边界。"
+    },
+    "spec": {
+      "eyebrow": "KEY SPECIFICATIONS",
+      "title": "关键参数",
+      "items": [
+        { "label": "CYCLES", "value": "20,000+", "unit": "次", "desc": "超长循环寿命" },
+        { "label": "TEMP", "value": "−40°C", "unit": "常温", "desc": "极限 −68°C 可工作" },
+        { "label": "FAST CHARGE", "value": "8C", "unit": "倍率", "desc": "可持续大倍率快充" },
+        { "label": "SAFETY", "value": "0", "unit": "析锂", "desc": "本征零析锂风险" }
+      ]
+    },
+    "advantage": {
+      "eyebrow": "WHY LTO",
+      "title1": "为什么是",
+      "title2": "钛酸锂",
+      "items": [
+        {
+          "title": "极端温度",
+          "desc": "−40°C 仍保持稳定容量输出，−68°C 极限可工作。北方寒区、高原、极地装备的首选化学体系。"
+        },
+        {
+          "title": "超长寿命",
+          "desc": "20,000+ 次循环 — 同等场景下使用寿命是普通锂电的 10 倍以上，全生命周期成本更低。"
+        },
+        {
+          "title": "本征安全",
+          "desc": "钛酸锂负极不形成 SEI 膜、不析锂、无热失控敏感性，是特种装备和应急电源的安全基线。"
+        },
+        {
+          "title": "快充能力",
+          "desc": "8C 持续快充意味着 7~8 分钟即可补满电量，无需为充电时间妥协运营效率。"
+        }
+      ]
+    },
+    "applications": {
+      "eyebrow": "APPLICATIONS",
+      "title": "典型应用",
+      "items": [
+        "军品配套 · 特种装备电源",
+        "极寒地区工业装备",
+        "应急电源 · 应急启动",
+        "AI 机器人 · 智能宠物",
+        "高频快充工业车辆"
+      ]
+    }
+  },
+  "sodium": {
+    "hero": {
+      "eyebrow": "VANTAGE · 03  /  SODIUM-ION",
+      "title1": "押注",
+      "title2": "下一代电池",
+      "subtitle": "SODIUM-ION · THE NEXT FRONTIER",
+      "description": "钠离子电池是下一代储能与低速动力的关键化学体系。金华达提前完成全链条产业布局，与高校、材料企业、头部客户协同推进商业化。"
+    },
+    "spec": {
+      "eyebrow": "KEY SPECIFICATIONS",
+      "title": "钠电关键参数",
+      "items": [
+        { "label": "CYCLES", "value": "≥2000", "unit": "次", "desc": "长寿命循环" },
+        { "label": "POWER", "value": "20C", "unit": "持续", "desc": "超高倍率放电" },
+        { "label": "TEMP", "value": "−40°C", "unit": "放电", "desc": "宽温域工作" },
+        { "label": "DENSITY", "value": "≥105", "unit": "Wh/kg", "desc": "重量能量密度" }
+      ]
+    },
+    "why": {
+      "eyebrow": "STRATEGIC VANTAGE",
+      "title1": "为什么是",
+      "title2": "钠离子",
+      "p1": "锂资源全球供需失衡、价格周期波动，钠资源储量丰富、成本可控。在储能、低速电动、备用电源等对能量密度不敏感的场景，钠离子电池将是必然的替代路线。",
+      "p2": "金华达的钠电布局并非追风，而是基于多年材料与工艺积累的前瞻判断 — 与头部高校实验室、上游材料商、行业先行整机厂深度协同，构建完整产业链能力。"
+    },
+    "pillars": {
+      "items": [
+        {
+          "number": "01",
+          "title": "产学研协同",
+          "desc": "与 985/211 高校联合实验室、头部材料企业建立长期合作。"
+        },
+        {
+          "number": "02",
+          "title": "全链条自主",
+          "desc": "覆盖材料、电芯、模组、PACK 全链条自主可控。"
+        },
+        {
+          "number": "03",
+          "title": "已实现量产",
+          "desc": "钠电产品已小批量出货，进入头部客户供应体系。"
+        },
+        {
+          "number": "04",
+          "title": "客户验证",
+          "desc": "客户名单包含国内多家钠电领域最前沿企业。"
+        }
+      ]
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "PRODUCTS  ·  CELL PORTFOLIO",
+      "title1": "8 款电芯",
+      "title2": "覆盖全场景",
+      "subtitle": "Customized Cells for Different Applications",
+      "description": "金华达提供从软包高能量密度、超高倍率钠电到圆柱 LTO 的完整电芯产品矩阵，适配从航空动力到工业储能的多样化应用需求。"
+    },
+    "filter": {
+      "all": "全部",
+      "pouch": "软包电芯",
+      "cylindrical": "圆柱电芯",
+      "lto": "LTO",
+      "sodium": "钠离子",
+      "nmc": "三元锂"
+    },
+    "table": {
+      "model": "型号",
+      "format": "形态",
+      "chemistry": "化学体系",
+      "capacity": "容量",
+      "voltage": "电压",
+      "density": "能量密度",
+      "cycles": "循环",
+      "tempRange": "温度范围",
+      "details": "查看详情"
+    },
+    "cells": [
+      {
+        "id": "kw-nmc-310",
+        "model": "KW-NMC-310",
+        "name": "310 Wh/kg 软包锂离子电芯",
+        "format": "Pouch 软包",
+        "chemistry": "NMC / Gr+SiOx",
+        "dimensions": "10.5 × 87 × 187 mm",
+        "capacity": "35.0 Ah",
+        "voltage": "3.6 V",
+        "density": "≥310 Wh/kg",
+        "cycles": "≥500 次",
+        "tempRange": "−20 ~ +60 °C",
+        "charge": "2.0C 最大持续充电",
+        "discharge": "3.0C 最大持续放电 · 5.0C 脉冲",
+        "weight": "398 g"
+      },
+      {
+        "id": "kw-nmc-370",
+        "model": "KW-NMC-370",
+        "name": "370 Wh/kg 软包锂离子电芯",
+        "format": "Pouch 软包",
+        "chemistry": "NMC / Gr+SiC",
+        "dimensions": "12.5 × 70 × 170 mm",
+        "capacity": "30.0 Ah",
+        "voltage": "3.5 V",
+        "density": "≥370 Wh/kg",
+        "cycles": "≥500 次",
+        "tempRange": "−20 ~ +45 °C",
+        "charge": "0.5C 最大持续充电",
+        "discharge": "5.0C 最大持续放电 · 10.0C 脉冲",
+        "weight": "280 g"
+      },
+      {
+        "id": "kw-nmc-390",
+        "model": "KW-NMC-390",
+        "name": "390 Wh/kg 软包锂离子电芯",
+        "format": "Pouch 软包",
+        "chemistry": "NMC / SiC+Gr",
+        "dimensions": "10.5 × 88 × 187 mm",
+        "capacity": "41.0 Ah",
+        "voltage": "3.5 V",
+        "density": "≥390 Wh/kg",
+        "cycles": "≥500 次",
+        "tempRange": "−20 ~ +45 °C",
+        "charge": "1.0C 最大持续充电",
+        "discharge": "2.0C 最大持续放电 · 5.0C 脉冲",
+        "weight": "367 g"
+      },
+      {
+        "id": "kw-evtol-01",
+        "model": "KW-eVTOL-01",
+        "name": "410 Wh/kg eVTOL 旗舰电芯",
+        "format": "Pouch 软包",
+        "chemistry": "NMC / Gr+SiC",
+        "dimensions": "10.0 × 133 × 200 mm",
+        "capacity": "70.0 Ah",
+        "voltage": "3.4 V",
+        "density": "≥410 Wh/kg",
+        "cycles": "≥1500 次",
+        "tempRange": "−20 ~ +45 °C",
+        "charge": "0.5C 最大持续充电",
+        "discharge": "≥8C 持续放电 · ≥15C 脉冲",
+        "weight": "570 g",
+        "flagship": true
+      },
+      {
+        "id": "kw-na-7000",
+        "model": "KW-Na-7000",
+        "name": "超高倍率钠离子电芯",
+        "format": "Pouch 软包",
+        "chemistry": "NFM / HC",
+        "dimensions": "7.0 × 82 × 190 mm",
+        "capacity": "7.0 Ah",
+        "voltage": "2.95 V",
+        "density": "≥105 Wh/kg",
+        "cycles": "≥2000 次",
+        "tempRange": "−40 ~ +60 °C",
+        "charge": "15C 最大持续充电",
+        "discharge": "20C 最大持续放电 · 25C 脉冲",
+        "weight": "193 g"
+      },
+      {
+        "id": "kw-lto-14500",
+        "model": "KW-LTO-14500",
+        "name": "快充型 LTO 圆柱电芯（AA）",
+        "format": "Cylindrical 圆柱",
+        "chemistry": "LTO 钛酸锂",
+        "dimensions": "Φ14 × 50 mm",
+        "capacity": "0.55 Ah",
+        "voltage": "1.7 V",
+        "density": "≥50 Wh/kg",
+        "cycles": "≥5000 (1C) · ≥2000 (8C)",
+        "tempRange": "−40 ~ +55 °C",
+        "charge": "8.0C 最大持续充电",
+        "discharge": "8.0C 持续 · 20C 脉冲",
+        "weight": "19 g",
+        "flagship": true
+      },
+      {
+        "id": "kw-18650-hp",
+        "model": "KW-18650-HP",
+        "name": "高倍率 18650 圆柱电芯",
+        "format": "Cylindrical 圆柱",
+        "chemistry": "NCA / Gr+SiOx",
+        "dimensions": "Φ18 × 65 mm",
+        "capacity": "2.9 Ah",
+        "voltage": "3.6 V",
+        "density": "≥220 Wh/kg",
+        "cycles": "≥1000 (1C/1C)",
+        "tempRange": "−60 ~ +60 °C",
+        "charge": "3.0C 最大持续充电",
+        "discharge": "12C 持续 · 20C 脉冲",
+        "weight": "46 g"
+      },
+      {
+        "id": "kw-21700-wt",
+        "model": "KW-21700-WT",
+        "name": "宽温域 21700 全极耳电芯",
+        "format": "Cylindrical 圆柱",
+        "chemistry": "NCM / Gr+SiOx",
+        "dimensions": "Φ21 × 70 mm",
+        "capacity": "5.0 Ah",
+        "voltage": "3.6 V",
+        "density": "≥250 Wh/kg",
+        "cycles": "≥1000 (1C/1C)",
+        "tempRange": "−60 ~ +60 °C",
+        "charge": "5C 最大持续充电",
+        "discharge": "15C 持续 · 30C 脉冲",
+        "weight": "70 g"
+      }
+    ]
+  },
+  "applications": {
+    "hero": {
+      "eyebrow": "APPLICATIONS  ·  六大场景",
+      "title1": "服务最严苛的",
+      "title2": "B 端市场",
+      "subtitle": "Six Frontiers · Six Solutions",
+      "description": "从万米高空的载人飞行器，到 −40°C 的极寒装备，从城市公交到数据中心备电，金华达的电池产品矩阵覆盖六大严苛 B 端场景。"
+    },
+    "lowAltitude": {
+      "title": "低空经济",
+      "titleEn": "Low-Altitude Economy",
+      "lead": "万亿级国家战略赛道的电池供应商。",
+      "p1": "载人 eVTOL、工业无人机和航空备用电源对电池提出的是航空级要求：高能量密度、高放电倍率、严格的一致性与安全冗余。",
+      "p2": "金华达 KW-eVTOL-01 已实现百万级商业化出货，与国内多家头部 eVTOL 整机厂建立长期合作。",
+      "scenarios": [
+        "载人 eVTOL 主动力电池",
+        "工业级长航时无人机",
+        "无人机机载备用电源",
+        "航空启动 · 应急电源"
+      ],
+      "products": ["KW-eVTOL-01", "KW-NMC-390", "KW-NMC-370"]
+    },
+    "defense": {
+      "title": "特种装备",
+      "titleEn": "Defense & Specialty",
+      "lead": "通过特种装备合格供应商资质的电池企业。",
+      "p1": "军工特种装备对电池的要求高于一切：极端温度下的稳定输出、零热失控风险、超长服役寿命。",
+      "p2": "金华达 LTO 电池在 −40°C 常温工作、−68°C 极限可工作，配合 20,000+ 次循环和本征零析锂特性,是极寒装备、应急电源、特种航空装备的首选化学体系。",
+      "scenarios": [
+        "极寒地区作战装备",
+        "特种应急电源",
+        "军用通信与侦察设备",
+        "特种航空装备"
+      ],
+      "products": ["KW-LTO-14500", "KW-21700-WT", "KW-18650-HP"]
+    },
+    "industrial": {
+      "title": "工业车辆",
+      "titleEn": "Industrial Vehicles",
+      "lead": "高频快充与超长循环是工业运营效率的核心。",
+      "p1": "电动叉车、扫地车、AGV 一天多班次运转，电池的快充能力和循环寿命直接决定运营成本。",
+      "p2": "KW-LTO-14500 系列的 8C 快充和 20,000+ 次循环，让工业车辆告别等待充电的低效，全生命周期更省。",
+      "scenarios": [
+        "电动叉车",
+        "工业扫地车",
+        "AGV 自动导引车",
+        "港口与机场地勤设备"
+      ],
+      "products": ["KW-LTO-14500", "KW-NMC-310"]
+    },
+    "commercial": {
+      "title": "商用交通",
+      "titleEn": "Commercial Transport",
+      "lead": "为低速电动与短途商用车提供稳定动力。",
+      "p1": "电动公交、低速车、高尔夫球车追求的是低成本、长寿命、稳定输出 — 而非极致能量密度。",
+      "p2": "金华达多体系产品矩阵可针对不同场景灵活配置 NMC / LFP / LTO，平衡续航、循环与成本。",
+      "scenarios": [
+        "电动公交车",
+        "低速电动车",
+        "高尔夫球车 · 观光车",
+        "短途城配物流车"
+      ],
+      "products": ["KW-NMC-310", "KW-LTO-14500"]
+    },
+    "storage": {
+      "title": "储能与备用",
+      "titleEn": "Storage & Backup",
+      "lead": "工商业储能、户外电源、房车的全场景解决方案。",
+      "p1": "储能场景对能量密度敏感度低，但对循环寿命、成本、安全性高度敏感。",
+      "p2": "金华达钠离子电池在循环寿命、宽温工作和成本控制上展现出代际优势，是下一代储能与备电的核心化学体系。",
+      "scenarios": [
+        "工商业储能系统",
+        "房车与户外电源",
+        "家庭储能",
+        "光储一体化系统"
+      ],
+      "products": ["KW-Na-7000", "KW-LTO-14500"]
+    },
+    "telecom": {
+      "title": "通信与数据",
+      "titleEn": "Telecom & Data",
+      "lead": "通信基站与数据中心备电的可靠之选。",
+      "p1": "通信基站和数据中心的备用电源系统对循环寿命、温度适应性和长期可靠性要求极高。",
+      "p2": "金华达 1U/3U 标准模组化备用电源方案，配合 LTO 与 LFP 双体系产品，覆盖从基站到大型数据中心的全场景需求。",
+      "scenarios": [
+        "通信基站备电",
+        "数据中心 UPS 后备",
+        "1U / 3U 机架式电源模组",
+        "边缘计算节点供电"
+      ],
+      "products": ["KW-LTO-14500", "KW-21700-WT"]
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "GET IN TOUCH",
+      "title1": "期待与您",
+      "title2": "开启",
+      "titleHighlight": "合作",
+      "subtitle": "LET'S BUILD WHAT'S NEXT",
+      "description": "不论您是寻找稳定可靠的工业电池伙伴，还是希望在未来低空经济的战略前沿同行 — 金华达准备好了。"
+    },
+    "form": {
+      "title": "提交合作意向",
+      "subtitle": "我们将在 1 个工作日内与您联系",
+      "name": "您的姓名",
+      "company": "公司 / 单位",
+      "title_": "职位",
+      "phone": "联系电话",
+      "email": "邮箱",
+      "applicationLabel": "应用领域",
+      "applicationOptions": [
+        "低空经济 / eVTOL",
+        "特种装备",
+        "工业车辆",
+        "商用交通",
+        "储能与备用",
+        "通信与数据",
+        "其他"
+      ],
+      "message": "请简要描述您的需求",
+      "submit": "提交合作意向",
+      "privacy": "我们承诺仅将您的信息用于商务对接，绝不外传。"
+    },
+    "info": {
+      "title": "直接联系我们",
+      "factory": {
+        "label": "FACTORY · 工厂",
+        "title": "梅州工厂",
+        "address": "广东省梅州市经济开发区东升工业园 AD2 区",
+        "phone": "0753-2228018"
+      },
+      "marketing": {
+        "label": "MARKETING · 营销中心",
+        "title": "广州营销中心",
+        "address": "广州市天河区棠下涌东路大地工业区 C 栋 5 楼",
+        "phone": "020-38216943"
+      },
+      "email": {
+        "label": "EMAIL · 邮箱",
+        "value": "020k@vip.com"
+      },
+      "web": {
+        "label": "WEB · 官网",
+        "value": "www.020k.com"
+      }
+    }
+  },
+  "footer": {
+    "brand": "广东金华达电子有限公司",
+    "tagline": "三十年专业积淀 · 从军工特种装备到低空经济航空动力，KINGWOOD 始终为最严苛的应用场景提供可靠能量。",
+    "company": "公司",
+    "products": "产品",
+    "applications": "应用",
+    "contact": "联系",
+    "factory": "工厂：广东梅州",
+    "marketing": "营销中心：广州天河",
+    "copyright": "© 2025 广东金华达电子有限公司",
+    "icp": "粤 ICP 备 XXXXXXXX 号"
+  }
+}
