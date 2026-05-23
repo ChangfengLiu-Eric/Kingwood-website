@@ -10,6 +10,11 @@ import { ArrowRight } from 'lucide-react';
  * 左侧：eyebrow + 大标题（衬线，关键词青色高亮）+ 副标 + 描述 + CTA
  * 右侧：抽象 SVG 圆环 + 中心点 + 脉冲呼吸
  * 极简、留白充分、品牌优先
+ *
+ * 移动端修复要点：
+ * 1. 小屏不再强制 min-h-[100svh] + items-center —— 内容多时会把标题顶到 Header 后面
+ *    改为：小屏自然流（pt-24 pb-16），桌面端才保留全屏居中视觉
+ * 2. SCROLL 提示在小屏隐藏 —— 否则它会绝对定位在 SVG/CTA 上方造成重叠
  */
 export function HomeHero() {
   const t = useTranslations('home.hero');
@@ -29,7 +34,7 @@ export function HomeHero() {
   };
 
   return (
-    <section className="relative min-h-[100svh] flex items-center pt-20 lg:pt-24 overflow-hidden">
+    <section className="relative pt-24 pb-16 lg:pt-24 lg:pb-0 lg:min-h-[100svh] lg:flex lg:items-center overflow-hidden">
       {/* 极轻网格背景 */}
       <div className="absolute inset-0 bg-grid-faint opacity-60 pointer-events-none" />
 
@@ -47,7 +52,9 @@ export function HomeHero() {
               {t('eyebrow')}
             </motion.p>
 
-            {/* 主标题 */}
+            {/* 主标题
+                小屏从 text-4xl 起（不再用更小的 text-3xl 起步）
+                超大屏不变 */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight text-ink-900 font-medium">
               <motion.span
                 custom={0}
@@ -114,19 +121,22 @@ export function HomeHero() {
             </motion.div>
           </div>
 
-          {/* 右侧：抽象 SVG */}
-          <div className="lg:col-span-5 relative flex items-center justify-center min-h-[320px] lg:min-h-[480px]">
+          {/* 右侧：抽象 SVG
+              小屏限制最大高度，避免 480px 的 aspect-square 在窄屏吃掉过多空间 */}
+          <div className="lg:col-span-5 relative flex items-center justify-center min-h-[280px] sm:min-h-[360px] lg:min-h-[480px]">
             <HeroVisual />
           </div>
         </div>
       </div>
 
-      {/* 底部 SCROLL 提示 */}
+      {/* 底部 SCROLL 提示
+          ⚠️ 仅在 lg 以上显示 —— 小屏单列布局时，绝对定位的 SCROLL 会叠在
+          下方 SVG 或上方 CTA 按钮上造成重叠 */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
+        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3"
       >
         <span className="eyebrow text-ink-400">{t('scroll')}</span>
         <motion.div
