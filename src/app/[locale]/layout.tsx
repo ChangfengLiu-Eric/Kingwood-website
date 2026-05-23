@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -10,6 +10,16 @@ import '../globals.css';
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+// ✅ 关键修复：Next.js 14 必须显式声明 viewport
+// 没有这段，移动端浏览器会按桌面宽度（~980px）渲染再缩放，
+// 看起来就是"所有要素全部挤在一起 / 互相重叠"
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#FFFFFF',
+};
 
 export async function generateMetadata({
   params,
@@ -59,9 +69,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale === 'cn' ? 'zh-CN' : 'en'} className="scroll-smooth">
-      <body className="min-h-screen flex flex-col antialiased">
+      {/* ✅ overflow-x-hidden 兜底，防止任何子元素意外撑破横向 */}
+      <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           <Header />
+          {/* 注：Header 是 fixed (h-16 mobile / h-20 desktop)
+              各 hero 组件已通过 pt-32 lg:pt-40 自留顶部空间，
+              这里不重复加 padding-top，避免双倍间距 */}
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
