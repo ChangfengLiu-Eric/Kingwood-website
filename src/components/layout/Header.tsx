@@ -10,7 +10,7 @@ import { LocaleSwitcher } from './LocaleSwitcher';
 /**
  * 主导航
  * - 桌面：水平菜单 + 右侧 CTA + 语言切换
- * - 移动：汉堡菜单
+ * - 移动：汉堡菜单（展开时整个 header 区域为不透明白底，避免与页面内容重叠）
  * - 滚动 4px 后增加边框分隔感
  */
 export function Header() {
@@ -25,8 +25,23 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // 一级菜单（按需可加入子菜单）
-  const navItems: { href: '/' | '/about' | '/evtol' | '/lto' | '/sodium-ion' | '/products' | '/applications'; label: string }[] = [
+  // 🔧 修复：菜单打开时禁止 body 滚动，防止穿透滚动看到错位的视觉
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
+  // 一级菜单
+  const navItems: {
+    href: '/' | '/about' | '/evtol' | '/lto' | '/sodium-ion' | '/products' | '/applications';
+    label: string;
+  }[] = [
     { href: '/', label: t('home') },
     { href: '/about', label: t('about') },
     { href: '/evtol', label: t('evtol') },
@@ -39,7 +54,10 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        // 🔧 修复：菜单打开时强制白底（优先级最高），否则按滚动状态决定
+        mobileOpen
+          ? 'bg-white border-b border-ink-100'
+          : scrolled
           ? 'bg-white/95 backdrop-blur-md border-b border-ink-100'
           : 'bg-white/0 backdrop-blur-0'
       }`}
@@ -78,30 +96,36 @@ export function Header() {
             className="lg:hidden p-2 -mr-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
-        {/* 移动端展开菜单 */}
+        {/*
+          🔧 修复：移动端展开菜单
+          - 关键修复:整个 panel 显式加 bg-white，独立于 header 背景，彻底遮挡下方内容
+          - 加 min-h-[calc(100vh-4rem)] 让菜单铺满剩余视口，下方不会再透出内容
+          - 用 overflow-y-auto 避免内容过长时溢出
+        */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-ink-100 py-6">
-            <nav className="flex flex-col gap-4">
+          <div className="lg:hidden bg-white border-t border-ink-100 min-h-[calc(100vh-4rem)] overflow-y-auto">
+            <nav className="flex flex-col gap-4 py-6">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-ink-700 py-1"
+                  className="text-base text-ink-700 py-2 hover:text-teal-500 transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              <div className="flex items-center justify-between pt-4 mt-2 border-t border-ink-100">
+              <div className="flex items-center justify-between pt-6 mt-2 border-t border-ink-100">
                 <LocaleSwitcher />
                 <Link
                   href="/contact"
-                  className="text-sm px-5 py-2 border border-ink-200"
+                  className="text-sm px-5 py-2 border border-ink-200 hover:border-teal-500 hover:text-teal-500 transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {t('cta')}
