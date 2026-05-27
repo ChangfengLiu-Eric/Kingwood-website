@@ -36,18 +36,25 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "EST. 1995  /  30 YEARS OF EXPERTISE",
-      "titleLine1": "让飞行更",
-      "titleHighlight1": "可靠",
-      "titleLine2": "让能量更",
-      "titleHighlight2": "长寿",
-      "subtitle": "Powering the Skies. Lasting the Distance.",
+      "eyebrow": "EST. 1995  ·  专业电池制造商",
+      "titleLine1": "我们的电池在万里高空，",
+      "titleHighlight1": "",
+      "titleLine2": "也在极寒",
+      "titleHighlight2": "荒野。",
+      "subtitle": "From the stratosphere to the frozen tundra.",
       "description": "三十年制造积淀，五大电池化学体系，从军工特种装备到低空经济航空动力，为最严苛的应用场景提供可靠的能量。",
       "ctaPrimary": "探索 eVTOL",
       "ctaSecondary": "了解金华达",
       "scroll": "SCROLL"
     },
+    "breathing": {
+      "eyebrow": "BRAND PHILOSOPHY"
+    },
     "stats": {
+      "sectionTitle": "制造积淀",
+      "sectionLine2": "数字为证",
+      "sectionDesc": "三十年专注动力电池，以量产工艺和材料积累构建技术壁垒。",
+      "sectionNote": "数据来源：公司内部运营报告（2024）",
       "heritage": {
         "value": "30",
         "suffix": "年",
@@ -78,8 +85,8 @@
       "modelLabel": "P / N",
       "modelNumber": "KW-eVTOL-01",
       "moduleLabel": "eVTOL · AVIATION BATTERY MODULE",
-      "title1": "为低空经济",
-      "title2": "提供动力",
+      "title1": "半固态性能电池，",
+      "title2": "为低空经济而生",
       "subtitle": "eVTOL 航空电池 · 已实现商业化交付",
       "description": "独立完成研发与量产，目前已稳定交付百万级订单。在万亿级国家战略赛道一线交付落地，金华达已完成关键卡位，是国内极少数已迈入商业化阶段的电池企业。",
       "spec1Label": "ENERGY",
@@ -96,8 +103,8 @@
     "lto": {
       "flagshipLabel": "FLAGSHIP · 02",
       "watermark": "L · T · O · B · A · T · T · E · R · Y",
-      "title1": "重新定义",
-      "title2": "可充电电池",
+      "title1": "钛酸锂（LTO）：",
+      "title2": "重新定义可充电电池",
       "subtitle": "钛酸锂小圆柱 · 军工技术 · 进入日常生活",
       "description": "把通过国防标准验证的钛酸锂技术，做成可替代普通 5 号电池的小圆柱形态。一次充满、循环上万次——足以陪伴一台 AI 机器人或智能宠物完整一生命周期。",
       "spec1Label": "CYCLES",
@@ -115,10 +122,10 @@
       "cta": "了解钛酸锂电池"
     },
     "sodium": {
-      "label": "VANTAGE · 03",
+      "label": "Na-ION · 钠离子电池",
       "watermark": "N · a · - · i · o · n",
-      "title1": "押注",
-      "title2": "下一代电池",
+      "title1": "押注钠离子，",
+      "title2": "布局下一代",
       "p1": "钠离子电池正从实验室走向规模化量产。金华达较早完成了从材料到电芯的全链条布局，与高校实验室及上游材料企业建立长期协同。",
       "p2": "目前，多家国内钠电先行企业已纳入我们的供应体系。",
       "moreLink": "查看对前沿钠电储备产品布局",
@@ -133,6 +140,7 @@
     },
     "applications": {
       "eyebrow": "APPLICATIONS · 应用领域",
+      "subtitle": "精密制造与严苛认证，赢得最挑剔客户的信任。",
       "title1": "服务最严苛的",
       "title2": "B 端市场",
       "items": {
@@ -177,10 +185,10 @@
     },
     "cta": {
       "eyebrow": "GET IN TOUCH",
-      "title1": "期待与您",
-      "title2": "开启",
-      "titleHighlight": "合作",
-      "description": "不论您是寻找稳定可靠的工业电池伙伴，还是希望在未来低空经济的战略前沿同行 — 金华达准备好了。",
+      "title1": "您的下一代产品",
+      "title2": "需要怎样的",
+      "titleHighlight": "电池",
+      "description": "不论您是寻找稳定可靠的工业电池伙伴，还是希望在低空经济战略前沿同行 — 金华达准备好了。",
       "ctaPrimary": "提交合作意向",
       "ctaSecondary": "下载产品资料",
       "phone": "PHONE",
@@ -245,6 +253,40 @@
           "year": "2025",
           "title": "钠离子前沿布局",
           "desc": "完成钠电全链条产业布局，进入国内头部钠电客户供应体系。"
+        }
+      ]
+    },
+    "manufacturing": {
+      "eyebrow": "MANUFACTURING & QC · 制造与品控",
+      "title": "梅州生产基地",
+      "subtitle": "Meizhou Manufacturing Base",
+      "description": "金华达唯一自有生产基地，坐落于广东省梅州市，占地规模满足 0.5 GWh 年产能需求，具备从电芯设计、极片制造、叠片成型到整包交付的全流程自有制造能力。",
+      "capacityLabel": "当前年产能",
+      "capacityValue": "0.5 GWh",
+      "staffValue": "100+",
+      "staffLabel": "员工 / Staff",
+      "badge1": "国家高新技术企业",
+      "badge2": "军品合格供应商",
+      "items": [
+        {
+          "label": "选址 / Location",
+          "title": "广东省梅州市",
+          "sub": "Meizhou, Guangdong"
+        },
+        {
+          "label": "产线 / Production Lines",
+          "title": "叠片软包自动化产线",
+          "sub": "全工序品控 · Automated stack-laminated pouch lines"
+        },
+        {
+          "label": "品控 / Quality Control",
+          "title": "IATF 16949 体系下全流程管控",
+          "sub": "Full-process control under IATF 16949"
+        },
+        {
+          "label": "扩产 / Expansion",
+          "title": "按需稳步推进产能扩张",
+          "sub": "按客户订单与战略合作需求，稳步推进产能扩张"
         }
       ]
     },

@@ -110,7 +110,7 @@ export function ProductsList() {
         <div className="mt-16 lg:mt-20 text-center">
           <p className="text-sm text-ink-500">
             {tCommon('contactForSpecs')} ·{' '}
-            <a href="mailto:020k@vip.com" className="text-teal-500 link-underline">
+            <a href="mailto:020k@vip.com" className="text-[#b8923f] link-underline">
               020k@vip.com
             </a>
           </p>
@@ -134,13 +134,13 @@ function ProductCard({
     <div
       className={`relative p-8 lg:p-10 border transition-all group ${
         isFlagship
-          ? 'border-teal-500 bg-teal-50/20 hover:bg-teal-50/40'
+          ? 'border-[#b8923f] bg-[#b8923f]/5 hover:bg-[#b8923f]/8'
           : 'border-ink-200 bg-white hover:border-ink-400'
       }`}
     >
       {/* FLAGSHIP 角标 */}
       {isFlagship && (
-        <div className="absolute top-0 right-0 inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal-500 text-white text-[10px] tracking-widest font-mono">
+        <div className="absolute top-0 right-0 inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#b8923f] text-white text-[10px] tracking-widest font-mono">
           <Star size={10} fill="currentColor" />
           <span>FLAGSHIP</span>
         </div>
@@ -200,7 +200,7 @@ function SpecRow({
       <p className="eyebrow text-ink-400 mb-1">{label}</p>
       <p
         className={`text-sm font-mono tracking-wide leading-snug ${
-          highlight ? 'text-teal-500 font-semibold' : 'text-ink-900'
+          highlight ? 'text-[#b8923f] font-semibold' : 'text-ink-900'
         }`}
       >
         {value}

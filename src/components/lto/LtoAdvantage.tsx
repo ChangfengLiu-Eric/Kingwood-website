@@ -32,7 +32,7 @@ export function LtoAdvantage() {
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
               <div className="border-t border-ink-200 pt-6">
-                <p className="eyebrow numeric text-teal-500 mb-4">
+                <p className="eyebrow numeric text-[#b8923f] mb-4">
                   0{i + 1}
                 </p>
                 <h3 className="font-serif text-2xl lg:text-3xl font-medium text-ink-900 mb-4">

@@ -38,7 +38,7 @@ export function ApplicationScene({ sceneKey, number }: Props) {
         <div className="container-content relative">
           <Link
             href="/applications"
-            className="inline-flex items-center gap-2 text-xs text-ink-500 hover:text-teal-500 transition-colors mb-12"
+            className="inline-flex items-center gap-2 text-xs text-ink-500 hover:text-[#b8923f] transition-colors mb-12"
           >
             <ArrowLeft size={14} />
             <span className="eyebrow">{tCommon('allApplications')}</span>
@@ -51,7 +51,7 @@ export function ApplicationScene({ sceneKey, number }: Props) {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="flex items-baseline gap-6 mb-8"
             >
-              <span className="font-serif text-5xl lg:text-6xl font-medium text-teal-500 numeric leading-none">
+              <span className="font-serif text-5xl lg:text-6xl font-medium text-[#b8923f] numeric leading-none">
                 {number}
               </span>
               <div>
@@ -130,7 +130,7 @@ export function ApplicationScene({ sceneKey, number }: Props) {
                 {scenarios.map((sc, i) => (
                   <Reveal key={sc} delay={i * 0.08}>
                     <li className="flex items-baseline gap-6 py-5 lg:py-6 border-b border-ink-200 last:border-0">
-                      <span className="font-mono text-xs text-teal-500 tracking-wider numeric shrink-0">
+                      <span className="font-mono text-xs text-[#b8923f] tracking-wider numeric shrink-0">
                         0{i + 1}
                       </span>
                       <span className="text-base lg:text-lg text-ink-700">{sc}</span>
@@ -162,13 +162,13 @@ export function ApplicationScene({ sceneKey, number }: Props) {
               <Reveal key={model} delay={i * 0.1}>
                 <Link
                   href="/products"
-                  className="block bg-white p-8 border border-ink-200 hover:border-teal-500 transition-colors group"
+                  className="block bg-white p-8 border border-ink-200 hover:border-[#b8923f] transition-colors group"
                 >
                   <p className="eyebrow text-ink-400 mb-3">MODEL</p>
-                  <p className="font-mono text-lg lg:text-xl tracking-wider text-ink-900 group-hover:text-teal-500 transition-colors">
+                  <p className="font-mono text-lg lg:text-xl tracking-wider text-ink-900 group-hover:text-[#b8923f] transition-colors">
                     {model}
                   </p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-xs text-ink-400 group-hover:text-teal-500 transition-colors">
+                  <div className="mt-6 inline-flex items-center gap-2 text-xs text-ink-400 group-hover:text-[#b8923f] transition-colors">
                     <span className="eyebrow">{tCommon('viewModel')}</span>
                     <ArrowRight
                       size={12}

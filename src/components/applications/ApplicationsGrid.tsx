@@ -39,7 +39,7 @@ export function ApplicationsGrid() {
               >
                 {/* 顶部：编号 + 英文标 */}
                 <div className="flex justify-between items-start mb-12">
-                  <p className="font-serif text-3xl lg:text-4xl font-medium numeric text-teal-500 leading-none">
+                  <p className="font-serif text-3xl lg:text-4xl font-medium numeric text-[#b8923f] leading-none">
                     {scene.number}
                   </p>
                   <p className="eyebrow text-ink-300 text-right">
@@ -58,7 +58,7 @@ export function ApplicationsGrid() {
                 </p>
 
                 {/* 进入提示 */}
-                <div className="flex items-center gap-2 text-xs text-ink-400 group-hover:text-teal-500 transition-colors mt-auto pt-6 border-t border-ink-100">
+                <div className="flex items-center gap-2 text-xs text-ink-400 group-hover:text-[#b8923f] transition-colors mt-auto pt-6 border-t border-ink-100">
                   <span className="eyebrow">EXPLORE</span>
                   <ArrowRight
                     size={14}

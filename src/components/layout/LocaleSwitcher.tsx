@@ -28,7 +28,7 @@ export function LocaleSwitcher() {
         className={`px-1.5 py-1 transition-colors ${
           locale === 'cn'
             ? 'text-ink-900'
-            : 'text-ink-400 hover:text-teal-500'
+            : 'text-ink-400 hover:text-[#b8923f]'
         }`}
         aria-label="切换到中文"
       >
@@ -40,7 +40,7 @@ export function LocaleSwitcher() {
         className={`px-1.5 py-1 transition-colors ${
           locale === 'en'
             ? 'text-ink-900'
-            : 'text-ink-400 hover:text-teal-500'
+            : 'text-ink-400 hover:text-[#b8923f]'
         }`}
         aria-label="Switch to English"
       >

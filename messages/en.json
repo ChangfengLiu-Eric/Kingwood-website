@@ -36,18 +36,25 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "EST. 1995  /  30 YEARS OF EXPERTISE",
-      "titleLine1": "Powering",
-      "titleHighlight1": "the Skies.",
-      "titleLine2": "Lasting",
-      "titleHighlight2": "the Distance.",
-      "subtitle": "让飞行更可靠，让能量更长寿",
+      "eyebrow": "EST. 1995  ·  PROFESSIONAL BATTERY MANUFACTURER",
+      "titleLine1": "Built for the sky,",
+      "titleHighlight1": "",
+      "titleLine2": "tested in the",
+      "titleHighlight2": "frozen tundra.",
+      "subtitle": "From the stratosphere to forty below zero.",
       "description": "Three decades of manufacturing legacy. Five battery chemistries. From defense-grade specialty equipment to commercial aviation — engineered for the most demanding applications.",
       "ctaPrimary": "Explore eVTOL",
       "ctaSecondary": "About Kingwood",
       "scroll": "SCROLL"
     },
+    "breathing": {
+      "eyebrow": "BRAND PHILOSOPHY"
+    },
     "stats": {
+      "sectionTitle": "Manufacturing",
+      "sectionLine2": "Legacy",
+      "sectionDesc": "Three decades focused on power batteries, building technological barriers through production processes and material expertise.",
+      "sectionNote": "Source: Company internal operations report (2024)",
       "heritage": {
         "value": "30",
         "suffix": "yrs",
@@ -78,8 +85,8 @@
       "modelLabel": "P / N",
       "modelNumber": "KW-eVTOL-01",
       "moduleLabel": "eVTOL · AVIATION BATTERY MODULE",
-      "title1": "Powering the",
-      "title2": "Low-Altitude Economy",
+      "title1": "Semi-Solid Performance Cell,",
+      "title2": "Built for Low-Altitude Flight",
       "subtitle": "Commercial eVTOL battery · in production",
       "description": "Independently developed and manufactured. Over one million units delivered into China's trillion-yuan low-altitude economy strategy — Kingwood is among the few cell suppliers to have achieved commercial scale.",
       "spec1Label": "ENERGY",
@@ -96,8 +103,8 @@
     "lto": {
       "flagshipLabel": "FLAGSHIP · 02",
       "watermark": "L · T · O · B · A · T · T · E · R · Y",
-      "title1": "Redefining",
-      "title2": "the Rechargeable Cell",
+      "title1": "Lithium Titanate (LTO):",
+      "title2": "Redefining the Rechargeable Cell",
       "subtitle": "LTO small cylindrical · defense-grade · daily-life ready",
       "description": "Defense-validated lithium titanate technology, reshaped into a standard AA-size replacement. One charge, 20,000+ cycles — enough to outlast the lifecycle of an AI robot or smart pet.",
       "spec1Label": "CYCLES",
@@ -115,10 +122,10 @@
       "cta": "Learn about LTO battery"
     },
     "sodium": {
-      "label": "VANTAGE · 03",
+      "label": "Na-ION · Sodium-Ion Battery",
       "watermark": "N · a · - · i · o · n",
-      "title1": "Betting on",
-      "title2": "the Next Chemistry",
+      "title1": "Betting on sodium-ion,",
+      "title2": "leading the next wave.",
       "p1": "Sodium-ion is moving from laboratory to volume production. Kingwood completed full-chain capability — from materials through cell manufacturing — through long-standing partnerships with research institutions and upstream material suppliers.",
       "p2": "Several leading sodium-ion adopters in China have qualified Kingwood as a supplier.",
       "moreLink": "View sodium-ion product portfolio",
@@ -133,6 +140,7 @@
     },
     "applications": {
       "eyebrow": "APPLICATIONS",
+      "subtitle": "Precision manufacturing and rigorous certification, earning the trust of the most demanding customers.",
       "title1": "Built for the most",
       "title2": "demanding B2B markets",
       "items": {
@@ -177,9 +185,9 @@
     },
     "cta": {
       "eyebrow": "GET IN TOUCH",
-      "title1": "Let's build",
-      "title2": "what's",
-      "titleHighlight": "next",
+      "title1": "What kind of battery",
+      "title2": "does your next product",
+      "titleHighlight": "need?",
       "description": "Whether you're sourcing a reliable industrial battery partner, or aiming to ride the front edge of the low-altitude economy — Kingwood is ready.",
       "ctaPrimary": "Start a conversation",
       "ctaSecondary": "Download brochure",
@@ -245,6 +253,40 @@
           "year": "2025",
           "title": "Sodium-Ion Frontier",
           "desc": "Completed full-chain sodium-ion industrial capability and entered the supply systems of China's leading sodium-ion adopters."
+        }
+      ]
+    },
+    "manufacturing": {
+      "eyebrow": "MANUFACTURING & QC",
+      "title": "Meizhou Manufacturing Base",
+      "subtitle": "梅州生产基地",
+      "description": "Kingwood's sole owned production facility, located in Meizhou, Guangdong. The site supports 0.5 GWh of annual capacity with full-chain manufacturing capability — from cell design and electrode fabrication to stack-lamination and pack delivery.",
+      "capacityLabel": "Current Annual Capacity",
+      "capacityValue": "0.5 GWh",
+      "staffValue": "100+",
+      "staffLabel": "Staff",
+      "badge1": "National High-Tech Enterprise",
+      "badge2": "Military-Qualified Supplier",
+      "items": [
+        {
+          "label": "Location",
+          "title": "Meizhou, Guangdong",
+          "sub": "广东省梅州市"
+        },
+        {
+          "label": "Production Lines",
+          "title": "Automated Stack-Laminated Pouch Lines",
+          "sub": "Full-process quality control on every step"
+        },
+        {
+          "label": "Quality Control",
+          "title": "IATF 16949 Full-Process",
+          "sub": "Full-process control under IATF 16949"
+        },
+        {
+          "label": "Expansion",
+          "title": "Capacity aligned with demand",
+          "sub": "Capacity expansion aligned with customer orders and strategic partnerships"
         }
       ]
     },

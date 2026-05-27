@@ -3,10 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
 
-/**
- * 关于页公司简介
- * 灰底，左大标题 + 右三段简介
- */
 export function AboutIntro() {
   const t = useTranslations('about.intro');
 
@@ -20,7 +16,7 @@ export function AboutIntro() {
               <p className="eyebrow mb-6">{t('eyebrow')}</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-ink-900 leading-[1.1]">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-[2.25rem] font-medium text-ink-900 leading-[1.15]">
                 <span className="block">{t('title1')}</span>
                 <span className="block">{t('title2')}</span>
               </h2>
@@ -30,17 +26,17 @@ export function AboutIntro() {
           {/* 右三段 */}
           <div className="lg:col-span-7 lg:pt-4">
             <Reveal delay={0.2}>
-              <p className="text-base lg:text-lg leading-relaxed text-ink-700 mb-6">
+              <p className="text-sm lg:text-base leading-relaxed text-ink-700 mb-6">
                 {t('p1')}
               </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <p className="text-base lg:text-lg leading-relaxed text-ink-700 mb-6">
+              <p className="text-sm lg:text-base leading-relaxed text-ink-700 mb-6">
                 {t('p2')}
               </p>
             </Reveal>
             <Reveal delay={0.4}>
-              <p className="text-base lg:text-lg leading-relaxed text-ink-700">
+              <p className="text-sm lg:text-base leading-relaxed text-ink-700">
                 {t('p3')}
               </p>
             </Reveal>

@@ -19,7 +19,7 @@ export function ApplicationsHero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="eyebrow text-teal-500 mb-8"
+            className="eyebrow text-[#b8923f] mb-8"
           >
             {t('eyebrow')}
           </motion.p>

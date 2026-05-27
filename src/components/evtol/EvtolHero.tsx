@@ -23,7 +23,7 @@ export function EvtolHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="eyebrow text-teal-500 mb-8"
+              className="eyebrow text-[#b8923f] mb-8"
             >
               {t('eyebrow')}
             </motion.p>
@@ -102,8 +102,8 @@ function EvtolSceneSvg() {
       >
         <defs>
           <radialGradient id="evtolGlow" cx="50%" cy="40%" r="55%">
-            <stop offset="0%" stopColor="#14B8B0" stopOpacity="0.15" />
-            <stop offset="100%" stopColor="#14B8B0" stopOpacity="0" />
+            <stop offset="0%" stopColor="#b8923f" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#b8923f" stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -135,13 +135,13 @@ function EvtolSceneSvg() {
         <line x1="190" y1="180" x2="155" y2="160" stroke="#0A2540" strokeWidth="1" />
         {/* 左旋翼盘 */}
         <ellipse cx="145" cy="155" rx="22" ry="3" stroke="#0A2540" strokeWidth="0.75" opacity="0.6" />
-        <line x1="123" y1="155" x2="167" y2="155" stroke="#14B8B0" strokeWidth="0.5" opacity="0.5" />
+        <line x1="123" y1="155" x2="167" y2="155" stroke="#b8923f" strokeWidth="0.5" opacity="0.5" />
 
         {/* 右旋翼支臂 */}
         <line x1="270" y1="180" x2="305" y2="160" stroke="#0A2540" strokeWidth="1" />
         {/* 右旋翼盘 */}
         <ellipse cx="315" cy="155" rx="22" ry="3" stroke="#0A2540" strokeWidth="0.75" opacity="0.6" />
-        <line x1="293" y1="155" x2="337" y2="155" stroke="#14B8B0" strokeWidth="0.5" opacity="0.5" />
+        <line x1="293" y1="155" x2="337" y2="155" stroke="#b8923f" strokeWidth="0.5" opacity="0.5" />
 
         {/* 机身下方 landing skid */}
         <line x1="210" y1="190" x2="200" y2="200" stroke="#0A2540" strokeWidth="0.75" opacity="0.5" />
@@ -149,14 +149,14 @@ function EvtolSceneSvg() {
         <line x1="200" y1="200" x2="260" y2="200" stroke="#0A2540" strokeWidth="0.75" opacity="0.5" />
 
         {/* 中央电池能量核心 */}
-        <circle cx="230" cy="180" r="3" fill="#14B8B0" />
+        <circle cx="230" cy="180" r="3" fill="#b8923f" />
 
         {/* 脉冲波 1 */}
         <motion.circle
           cx="230"
           cy="180"
           r="20"
-          stroke="#14B8B0"
+          stroke="#b8923f"
           strokeWidth="0.75"
           fill="none"
           initial={{ r: 20, opacity: 0.7 }}
@@ -168,7 +168,7 @@ function EvtolSceneSvg() {
           cx="230"
           cy="180"
           r="20"
-          stroke="#14B8B0"
+          stroke="#b8923f"
           strokeWidth="0.75"
           fill="none"
           initial={{ r: 20, opacity: 0.7 }}
@@ -179,7 +179,7 @@ function EvtolSceneSvg() {
         {/* 上升的飞行轨迹（虚线） */}
         <motion.path
           d="M 230 340 Q 230 270 230 190"
-          stroke="#14B8B0"
+          stroke="#b8923f"
           strokeWidth="0.5"
           strokeDasharray="2 4"
           fill="none"

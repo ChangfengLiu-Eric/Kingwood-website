@@ -1,11 +1,10 @@
 import { setRequestLocale } from 'next-intl/server';
-import { HomeHero } from '@/components/home/HomeHero';
-import { HomeStats } from '@/components/home/HomeStats';
-import { HomeEvtol } from '@/components/home/HomeEvtol';
-import { HomeLto } from '@/components/home/HomeLto';
-import { HomeSodium } from '@/components/home/HomeSodium';
+import { HomeHero }         from '@/components/home/HomeHero';
+import { HomeEvtol }        from '@/components/home/HomeEvtol';
+import { HomeLto }          from '@/components/home/HomeLto';
+import { HomeSodium }       from '@/components/home/HomeSodium';
 import { HomeApplications } from '@/components/home/HomeApplications';
-import { HomeCta } from '@/components/home/HomeCta';
+import { HomeCta }          from '@/components/home/HomeCta';
 
 export default async function HomePage({
   params,
@@ -18,7 +17,6 @@ export default async function HomePage({
   return (
     <>
       <HomeHero />
-      <HomeStats />
       <HomeEvtol />
       <HomeLto />
       <HomeSodium />

@@ -5,61 +5,56 @@ import { useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { Reveal } from '@/components/ui/Reveal';
 
-/**
- * 首页底部 CTA
- * "期待与您 / 开启合作"
- * 双按钮 + 三联系信息（电话/邮箱/地点）
- */
 export function HomeCta() {
   const t = useTranslations('home.cta');
 
   return (
-    <section className="bg-white py-24 lg:py-32 border-t border-ink-100">
-      <div className="container-content text-center">
-        <Reveal>
-          <p className="eyebrow mb-8">{t('eyebrow')}</p>
-        </Reveal>
+    <section className="bg-white py-[120px] lg:py-[180px]">
+      <div className="container-content">
+        <div className="max-w-3xl mx-auto text-center">
 
-        <Reveal delay={0.1}>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] font-medium text-ink-900">
-            <span className="block">{t('title1')}</span>
-            <span className="block">
-              {t('title2')}
-              <span className="accent">{t('titleHighlight')}</span>
-            </span>
-          </h2>
-        </Reveal>
+          <Reveal>
+            <p className="eyebrow-gold mb-10">{t('eyebrow')}</p>
+          </Reveal>
 
-        <Reveal delay={0.2}>
-          <p className="mt-8 max-w-xl mx-auto text-sm lg:text-base leading-relaxed text-ink-600">
-            {t('description')}
-          </p>
-        </Reveal>
+          <Reveal delay={0.12}>
+            <h2 className="kw2-serif text-[clamp(1.875rem,4.5vw,3.25rem)] leading-[1.2] text-[#0e1320]">
+              <span className="block">{t('title1')}，</span>
+              <span className="block">
+                {t('title2')}
+                <span className="text-[#b8923f]">{t('titleHighlight')}</span>？
+              </span>
+            </h2>
+          </Reveal>
 
-        {/* 双按钮 */}
-        <Reveal delay={0.3}>
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="btn-primary group">
-              <span>{t('ctaPrimary')}</span>
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-            <Link href="/products" className="btn-secondary">
-              {t('ctaSecondary')}
-            </Link>
-          </div>
-        </Reveal>
+          <Reveal delay={0.22}>
+            <p className="mt-7 text-[15px] font-light leading-relaxed text-[#6a7180] max-w-lg mx-auto">
+              {t('description')}
+            </p>
+          </Reveal>
 
-        {/* 三联系信息 */}
-        <Reveal delay={0.4}>
-          <div className="mt-20 lg:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto pt-12 border-t border-ink-100">
-            <ContactItem label={t('phone')} value={t('phoneValue')} />
-            <ContactItem label={t('email')} value={t('emailValue')} />
-            <ContactItem label={t('location')} value={t('locationValue')} />
-          </div>
-        </Reveal>
+          <Reveal delay={0.32}>
+            <div className="mt-12 flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="btn-primary group">
+                <span>{t('ctaPrimary')}</span>
+                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link href="/products" className="btn-secondary">
+                {t('ctaSecondary')}
+              </Link>
+            </div>
+          </Reveal>
+
+          {/* 联系信息 */}
+          <Reveal delay={0.42}>
+            <div className="mt-20 pt-10 border-t border-[#e8e8e4] grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <ContactItem label={t('phone')}    value={t('phoneValue')}    />
+              <ContactItem label={t('email')}    value={t('emailValue')}    />
+              <ContactItem label={t('location')} value={t('locationValue')} />
+            </div>
+          </Reveal>
+
+        </div>
       </div>
     </section>
   );
@@ -68,8 +63,8 @@ export function HomeCta() {
 function ContactItem({ label, value }: { label: string; value: string }) {
   return (
     <div className="text-center">
-      <p className="eyebrow text-ink-400 mb-3">{label}</p>
-      <p className="text-sm font-mono tracking-wider text-ink-700">{value}</p>
+      <p className="eyebrow text-[#8a8f9a] mb-3">{label}</p>
+      <p className="text-sm font-mono tracking-wider text-[#3a4150]">{value}</p>
     </div>
   );
 }

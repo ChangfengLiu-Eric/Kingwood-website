@@ -34,7 +34,7 @@ export function LtoApplications() {
               {items.map((item, i) => (
                 <Reveal key={item} delay={i * 0.08}>
                   <li className="flex items-baseline gap-6 py-5 lg:py-6 border-b border-ink-200 last:border-0">
-                    <span className="font-mono text-xs text-teal-500 tracking-wider numeric shrink-0">
+                    <span className="font-mono text-xs text-[#b8923f] tracking-wider numeric shrink-0">
                       0{i + 1}
                     </span>
                     <span className="text-base lg:text-lg text-ink-700">{item}</span>

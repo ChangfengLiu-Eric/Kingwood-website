@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { AboutHero } from '@/components/about/AboutHero';
 import { AboutIntro } from '@/components/about/AboutIntro';
 import { AboutTimeline } from '@/components/about/AboutTimeline';
+import { AboutManufacturing } from '@/components/about/AboutManufacturing';
 import { AboutCredentials } from '@/components/about/AboutCredentials';
 
 export default async function AboutPage({
@@ -17,6 +18,7 @@ export default async function AboutPage({
       <AboutHero />
       <AboutIntro />
       <AboutTimeline />
+      <AboutManufacturing />
       <AboutCredentials />
     </>
   );

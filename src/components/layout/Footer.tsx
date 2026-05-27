@@ -3,24 +3,23 @@ import { useTranslations } from 'next-intl';
 import { Logo } from './Logo';
 
 export function Footer() {
-  const t = useTranslations('footer');
+  const t    = useTranslations('footer');
   const tNav = useTranslations('nav');
 
-  // 四列链接
   const columns = [
     {
       title: t('company'),
       links: [
-        { href: '/about' as const, label: tNav('about') },
+        { href: '/about'        as const, label: tNav('about')        },
       ],
     },
     {
       title: t('products'),
       links: [
-        { href: '/evtol' as const, label: tNav('evtol') },
-        { href: '/lto' as const, label: tNav('lto') },
-        { href: '/sodium-ion' as const, label: tNav('sodium') },
-        { href: '/products' as const, label: tNav('products') },
+        { href: '/evtol'        as const, label: tNav('evtol')        },
+        { href: '/lto'          as const, label: tNav('lto')          },
+        { href: '/sodium-ion'   as const, label: tNav('sodium')       },
+        { href: '/products'     as const, label: tNav('products')     },
       ],
     },
     {
@@ -32,39 +31,41 @@ export function Footer() {
     {
       title: t('contact'),
       links: [
-        { href: '/contact' as const, label: tNav('contact') },
+        { href: '/contact'      as const, label: tNav('contact')      },
       ],
     },
   ];
 
   return (
-    <footer className="bg-ink-900 text-white">
-      <div className="container-content py-20 lg:py-24">
-        {/* 上半：品牌 + 四列 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+    <footer className="bg-[#0a1220] text-white">
+      <div className="container-content py-16 lg:py-24">
+
+        {/* 上半：品牌 + 四列链接 */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16 lg:mb-20">
+
           {/* 品牌区 */}
           <div className="lg:col-span-5">
             <Logo variant="light" />
-            <p className="mt-6 text-sm leading-relaxed text-white/60 max-w-md">
+            <p className="mt-6 text-sm leading-relaxed text-white/50 max-w-sm">
               {t('tagline')}
             </p>
-            <div className="mt-8 space-y-2 text-xs text-white/40">
+            <div className="mt-8 space-y-2 text-xs text-white/30">
               <p>{t('factory')}</p>
               <p>{t('marketing')}</p>
             </div>
           </div>
 
-          {/* 四列链接 */}
+          {/* 四列导航链接 */}
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
             {columns.map((col) => (
               <div key={col.title}>
-                <h4 className="eyebrow text-white/40 mb-4">{col.title}</h4>
+                <h4 className="eyebrow-light mb-5">{col.title}</h4>
                 <ul className="space-y-3">
                   {col.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-white/80 hover:text-teal-400 transition-colors"
+                        className="text-sm text-white/65 hover:text-white transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -76,10 +77,10 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 下半：版权 + ICP */}
-        <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-xs text-white/40">{t('copyright')}</p>
-          <p className="text-xs text-white/30">{t('icp')}</p>
+        {/* 版权行 */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <p className="text-xs text-white/35">{t('copyright')}</p>
+          <p className="text-xs text-white/25">{t('icp')}</p>
         </div>
       </div>
     </footer>

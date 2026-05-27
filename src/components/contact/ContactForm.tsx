@@ -30,8 +30,8 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="border border-teal-500 bg-teal-50/30 p-12 lg:p-16 text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-500 text-white mb-6">
+      <div className="border border-[#b8923f] bg-[#b8923f]/5 p-12 lg:p-16 text-center">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#b8923f] text-white mb-6">
           <Check size={28} strokeWidth={2.5} />
         </div>
         <h3 className="font-serif text-2xl lg:text-3xl font-medium text-ink-900 mb-3">
@@ -77,7 +77,7 @@ export function ContactForm() {
         <select
           name="application"
           required
-          className="w-full px-4 py-3 border border-ink-200 bg-white text-sm text-ink-900 focus:border-teal-500 focus:outline-none transition-colors"
+          className="w-full px-4 py-3 border border-ink-200 bg-white text-sm text-ink-900 focus:border-[#b8923f] focus:outline-none transition-colors"
           defaultValue=""
         >
           <option value="" disabled>
@@ -98,7 +98,7 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full px-4 py-3 border border-ink-200 bg-white text-sm text-ink-900 focus:border-teal-500 focus:outline-none transition-colors resize-none"
+          className="w-full px-4 py-3 border border-ink-200 bg-white text-sm text-ink-900 focus:border-[#b8923f] focus:outline-none transition-colors resize-none"
         />
       </div>
 
@@ -138,14 +138,14 @@ function Field({
     <div>
       <label htmlFor={name} className="eyebrow text-ink-500 block mb-2">
         {label}
-        {required && <span className="text-teal-500 ml-1">*</span>}
+        {required && <span className="text-[#b8923f] ml-1">*</span>}
       </label>
       <input
         id={name}
         name={name}
         type={type}
         required={required}
-        className="w-full px-4 py-3 border border-ink-200 bg-white text-sm text-ink-900 focus:border-teal-500 focus:outline-none transition-colors"
+        className="w-full px-4 py-3 border border-ink-200 bg-white text-sm text-ink-900 focus:border-[#b8923f] focus:outline-none transition-colors"
       />
     </div>
   );

@@ -23,7 +23,7 @@ export function LtoHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="eyebrow text-teal-500 mb-8"
+              className="eyebrow text-[#b8923f] mb-8"
             >
               {t('eyebrow')}
             </motion.p>
@@ -124,7 +124,7 @@ function TemperatureScaleSvg() {
           y={tempToY(55)}
           width="10"
           height={tempToY(-68) - tempToY(55)}
-          fill="#14B8B0"
+          fill="#b8923f"
           opacity="0.15"
           initial={{ scaleY: 0, transformOrigin: '50% 50%' }}
           animate={{ scaleY: 1 }}
@@ -136,7 +136,7 @@ function TemperatureScaleSvg() {
           y={tempToY(-40)}
           width="16"
           height={tempToY(-68) - tempToY(-40)}
-          fill="#14B8B0"
+          fill="#b8923f"
           opacity="0.4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.4 }}
@@ -179,7 +179,7 @@ function TemperatureScaleSvg() {
               y1={tempToY(m.temp)}
               x2={m.highlight ? '96' : '88'}
               y2={tempToY(m.temp)}
-              stroke={m.highlight ? '#14B8B0' : '#0A2540'}
+              stroke={m.highlight ? '#b8923f' : '#0A2540'}
               strokeWidth={m.highlight ? 1.5 : 0.75}
               opacity={m.highlight ? 1 : 0.5}
             />
@@ -189,7 +189,7 @@ function TemperatureScaleSvg() {
               y={tempToY(m.temp) + 4}
               fontSize="11"
               fontFamily="JetBrains Mono, monospace"
-              fill={m.highlight ? '#14B8B0' : '#0A0E14'}
+              fill={m.highlight ? '#b8923f' : '#0A0E14'}
               fontWeight={m.highlight ? 600 : 400}
               letterSpacing="0.5"
             >

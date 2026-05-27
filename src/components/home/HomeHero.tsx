@@ -5,307 +5,225 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-/**
- * 首页 Hero
- * 左侧：eyebrow + 大标题（衬线，关键词青色高亮）+ 副标 + 描述 + CTA
- * 右侧：抽象 SVG 圆环 + 中心点 + 脉冲呼吸
- * 极简、留白充分、品牌优先
- *
- * 移动端修复要点：
- * 1. 小屏不再强制 min-h-[100svh] + items-center —— 内容多时会把标题顶到 Header 后面
- *    改为：小屏自然流（pt-24 pb-16），桌面端才保留全屏居中视觉
- * 2. SCROLL 提示在小屏隐藏 —— 否则它会绝对定位在 SVG/CTA 上方造成重叠
- */
-export function HomeHero() {
-  const t = useTranslations('home.hero');
-
-  // 标题动画序列：逐行浮现
-  const titleVariants = {
-    hidden: { opacity: 0, y: 24 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.1 + i * 0.15,
-        duration: 1,
-        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
-      },
-    }),
-  };
+/** 工业无人机：俯视角，旋翼持续旋转（translate 旋转中心法） */
+function DroneDetailed() {
+  // 四个电机位置（相对 120x120 画布）
+  const motors: Array<{ tx: number; ty: number; ccw: boolean }> = [
+    { tx: 24, ty: 24, ccw: false },
+    { tx: 96, ty: 24, ccw: true  },
+    { tx: 24, ty: 96, ccw: true  },
+    { tx: 96, ty: 96, ccw: false },
+  ];
 
   return (
-    <section className="relative pt-24 pb-16 lg:pt-24 lg:pb-0 lg:min-h-[100svh] lg:flex lg:items-center overflow-hidden">
-      {/* 极轻网格背景 */}
-      <div className="absolute inset-0 bg-grid-faint opacity-60 pointer-events-none" />
+    <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* 机臂 */}
+      <line x1="60" y1="60" x2="24" y2="24" stroke="#c8a24f" strokeWidth="3"   strokeLinecap="round"/>
+      <line x1="60" y1="60" x2="96" y2="24" stroke="#c8a24f" strokeWidth="3"   strokeLinecap="round"/>
+      <line x1="60" y1="60" x2="24" y2="96" stroke="#c8a24f" strokeWidth="3"   strokeLinecap="round"/>
+      <line x1="60" y1="60" x2="96" y2="96" stroke="#c8a24f" strokeWidth="3"   strokeLinecap="round"/>
 
-      <div className="container-content relative w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* 左侧：文字 */}
+      {/* 四个电机 + 旋翼 */}
+      {motors.map(({ tx, ty, ccw }, i) => (
+        <g key={i} transform={`translate(${tx}, ${ty})`}>
+          {/* 旋翼盘 */}
+          <circle r="14" fill="rgba(184,146,63,0.07)" stroke="#c8a24f" strokeWidth="1" strokeOpacity="0.6"/>
+          {/* 旋转桨叶：以原点为中心旋转 */}
+          <motion.g
+            animate={{ rotate: ccw ? -360 : 360 }}
+            transition={{ duration: 0.4, repeat: Infinity, ease: 'linear' }}
+          >
+            <line x1="-13" y1="0" x2="13" y2="0" stroke="#d4a84a" strokeWidth="2.8" strokeLinecap="round"/>
+            <line x1="0" y1="-13" x2="0" y2="13" stroke="#d4a84a" strokeWidth="2.8" strokeLinecap="round"/>
+          </motion.g>
+          {/* 电机壳 */}
+          <circle r="5.5" fill="rgba(30,48,80,0.98)" stroke="#c8a24f" strokeWidth="1.4"/>
+          <circle r="2.2" fill="#d4a84a"/>
+        </g>
+      ))}
+
+      {/* 机身 */}
+      <rect x="42" y="42" width="36" height="36" rx="6" fill="rgba(22,38,62,0.98)" stroke="#c8a24f" strokeWidth="1.8"/>
+      <line x1="42" y1="52" x2="78" y2="52" stroke="#c8a24f" strokeWidth="0.6" strokeOpacity="0.4"/>
+      <line x1="42" y1="68" x2="78" y2="68" stroke="#c8a24f" strokeWidth="0.6" strokeOpacity="0.4"/>
+
+      {/* 摄像头云台 */}
+      <circle cx="60" cy="60" r="8.5" stroke="#c8a24f" strokeWidth="1.2" strokeOpacity="0.7" fill="rgba(184,146,63,0.1)"/>
+      <circle cx="60" cy="60" r="5"   fill="#c8a24f" fillOpacity="0.9"/>
+      <circle cx="60" cy="60" r="2.4" fill="rgba(255,255,255,0.95)"/>
+
+      {/* 前向指示灯（顶部） */}
+      <motion.circle cx="60" cy="30" r="2.8" fill="#d4a84a"
+        animate={{ opacity: [1, 0.2, 1] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+      />
+    </svg>
+  );
+}
+
+/** 轨道视觉：三环 + 无人机浮动 */
+function OrbitalVisual() {
+  return (
+    <div className="relative flex items-center justify-center" style={{ height: 420 }}>
+
+      {/* ── 外环 (360px)：极慢 ───────────────────────────────────── */}
+      <motion.div
+        className="absolute rounded-full pointer-events-none"
+        style={{ width: 360, height: 360, border: '1px solid rgba(255,255,255,0.07)' }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+      />
+
+      {/* ── 倾斜椭圆环 (280px)：逆时针 ─────────────────────────── */}
+      <div style={{ transform: 'perspective(500px) rotateX(68deg) rotateZ(15deg)', position: 'absolute' }}>
+        <motion.div
+          className="rounded-full"
+          style={{ width: 280, height: 280, border: '1px solid rgba(184,146,63,0.22)' }}
+          animate={{ rotate: -360 }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
+        >
+          <div className="absolute w-2 h-2 rounded-full bg-white/55"
+            style={{ top: -4, left: '50%', transform: 'translateX(-50%)' }} />
+          <div className="absolute w-1.5 h-1.5 rounded-full bg-[#b8923f]/65"
+            style={{ bottom: -3, left: '50%', transform: 'translateX(-50%)' }} />
+        </motion.div>
+      </div>
+
+      {/* ── 中环 (220px)：轨道跑点 ──────────────────────────────── */}
+      <div className="absolute" style={{ width: 220, height: 220 }}>
+        <motion.div
+          className="absolute inset-0 rounded-full"
+          style={{ border: '1px solid rgba(184,146,63,0.50)' }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+        >
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-[#b8923f]"
+            style={{ top: -5, left: '50%', transform: 'translateX(-50%)', boxShadow: '0 0 10px 4px rgba(184,146,63,0.75)' }} />
+        </motion.div>
+      </div>
+
+      {/* ── 无人机背景光晕 ───────────────────────────────────────── */}
+      <div className="absolute w-56 h-56 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(184,146,63,0.10) 0%, transparent 65%)' }} />
+
+      {/* ── 无人机：上下浮动 ─────────────────────────────────────── */}
+      <motion.div
+        className="absolute"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ filter: 'drop-shadow(0 0 20px rgba(184,146,63,0.60))' }}
+      >
+        <DroneDetailed />
+      </motion.div>
+
+    </div>
+  );
+}
+
+export function HomeHero() {
+  const t  = useTranslations('home.hero');
+  const ts = useTranslations('home.stats');
+
+  const fade = (delay: number) => ({
+    initial:    { opacity: 0, y: 20 },
+    animate:    { opacity: 1, y: 0  },
+    transition: { duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+  });
+
+  const metrics = [
+    { value: ts('heritage.value'), suffix: ts('heritage.suffix'), label: ts('heritage.label') },
+    { value: ts('capacity.value'),  suffix: ts('capacity.suffix'),  label: ts('capacity.label')  },
+    { value: ts('chemistry.value'), suffix: '',                     label: ts('chemistry.label') },
+    { value: ts('quality.value'),   suffix: '',                     label: ts('quality.label')   },
+  ];
+
+  return (
+    <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center">
+
+      {/* ── 背景层 ──────────────────────────────────────────────────────── */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #04090f 0%, #080f1e 35%, #0c1728 60%, #060e1a 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 100% 55% at 38% -5%, rgba(28,58,110,0.55) 0%, transparent 65%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 60% 50% at 90% 110%, rgba(14,32,64,0.45) 0%, transparent 70%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 45% 60% at 80% 50%, rgba(184,146,63,0.04) 0%, transparent 70%)' }} />
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: ['linear-gradient(rgba(184,146,63,1) 1px, transparent 1px)', 'linear-gradient(to right, rgba(184,146,63,1) 1px, transparent 1px)'].join(','),
+          backgroundSize: '88px 88px',
+          opacity: 0.028,
+        }} />
+        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(4,9,15,0.65) 100%)' }} />
+      </div>
+
+      {/* ── 内容 ────────────────────────────────────────────────────────── */}
+      <div className="container-content relative w-full pt-32 pb-20 lg:pt-40 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+          {/* 左：文字 */}
           <div className="lg:col-span-7">
-            {/* Eyebrow */}
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="eyebrow mb-8 lg:mb-10"
-            >
-              {t('eyebrow')}
-            </motion.p>
+            <motion.div {...fade(0.08)} className="flex items-center gap-5 mb-10 lg:mb-12">
+              <span className="text-[11px] tracking-[0.32em] uppercase text-white/45 font-medium whitespace-nowrap">
+                {t('eyebrow')}
+              </span>
+              <span className="h-px w-12 bg-[#b8923f] flex-shrink-0" />
+            </motion.div>
 
-            {/* 主标题
-                小屏从 text-4xl 起（不再用更小的 text-3xl 起步）
-                超大屏不变 */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight text-ink-900 font-medium">
-              <motion.span
-                custom={0}
-                variants={titleVariants}
-                initial="hidden"
-                animate="visible"
-                className="block"
-              >
-                {t('titleLine1')}
-                <span className="accent">{t('titleHighlight1')}</span>
-              </motion.span>
-              <motion.span
-                custom={1}
-                variants={titleVariants}
-                initial="hidden"
-                animate="visible"
-                className="block"
-              >
+            <motion.h1
+              {...fade(0.2)}
+              className="kw2-serif text-[clamp(1.75rem,3.8vw,3rem)] leading-[1.15] tracking-tight text-white"
+            >
+              <span className="block">{t('titleLine1')}{t('titleHighlight1')}</span>
+              <span className="block">
                 {t('titleLine2')}
-                <span className="accent">{t('titleHighlight2')}</span>
-              </motion.span>
-            </h1>
+                <span className="text-[#b8923f]">{t('titleHighlight2')}</span>
+              </span>
+            </motion.h1>
 
-            {/* 英文副标 */}
-            <motion.p
-              custom={2}
-              variants={titleVariants}
-              initial="hidden"
-              animate="visible"
-              className="mt-6 lg:mt-8 text-base lg:text-lg text-ink-500 font-light tracking-wide"
-            >
+            <motion.p {...fade(0.34)} className="mt-6 text-[17px] font-light tracking-wide text-white/50 max-w-md">
               {t('subtitle')}
             </motion.p>
 
-            {/* 描述 */}
-            <motion.p
-              custom={3}
-              variants={titleVariants}
-              initial="hidden"
-              animate="visible"
-              className="mt-6 max-w-xl text-sm lg:text-base leading-relaxed text-ink-600"
-            >
-              {t('description')}
-            </motion.p>
-
-            {/* CTA */}
-            <motion.div
-              custom={4}
-              variants={titleVariants}
-              initial="hidden"
-              animate="visible"
-              className="mt-10 lg:mt-12 flex flex-wrap items-center gap-4"
-            >
-              <Link href="/evtol" className="btn-primary group">
+            <motion.div {...fade(0.48)} className="mt-10 flex flex-wrap gap-4">
+              <Link href="/evtol" className="group inline-flex items-center gap-2 px-6 py-3.5 bg-[#b8923f] text-white text-sm font-medium tracking-wide hover:bg-[#a07c36] transition-colors">
                 <span>{t('ctaPrimary')}</span>
-                <ArrowRight
-                  size={16}
-                  className="transition-transform group-hover:translate-x-1"
-                />
+                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link href="/about" className="btn-secondary">
+              <Link href="/about" className="inline-flex items-center gap-2 px-6 py-3.5 border border-white/20 text-white/75 text-sm font-medium tracking-wide hover:border-white/45 hover:text-white transition-colors">
                 {t('ctaSecondary')}
               </Link>
             </motion.div>
           </div>
 
-          {/* 右侧：抽象 SVG
-              小屏限制最大高度，避免 480px 的 aspect-square 在窄屏吃掉过多空间 */}
-          <div className="lg:col-span-5 relative flex items-center justify-center min-h-[280px] sm:min-h-[360px] lg:min-h-[480px]">
-            <HeroVisual />
-          </div>
+          {/* 右：持续动效轨道图形 */}
+          <motion.div
+            className="hidden lg:flex lg:col-span-5 items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+          >
+            <OrbitalVisual />
+          </motion.div>
+
         </div>
-      </div>
 
-      {/* 底部 SCROLL 提示
-          ⚠️ 仅在 lg 以上显示 —— 小屏单列布局时，绝对定位的 SCROLL 会叠在
-          下方 SVG 或上方 CTA 按钮上造成重叠 */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3"
-      >
-        <span className="eyebrow text-ink-400">{t('scroll')}</span>
+        {/* 底部数据行 */}
         <motion.div
-          animate={{ height: [12, 24, 12] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-px bg-ink-300"
-        />
-      </motion.div>
+          {...fade(0.62)}
+          className="mt-20 lg:mt-24 pt-8 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6"
+        >
+          {metrics.map((m, i) => (
+            <div key={i}>
+              <div className="flex items-baseline gap-1.5 flex-wrap">
+                <span className="font-bold text-[clamp(1.75rem,3.2vw,2.625rem)] leading-none tracking-tight text-white tabular-nums">
+                  {m.value}
+                </span>
+                {m.suffix && <span className="unit-gold text-sm">{m.suffix}</span>}
+              </div>
+              <p className="mt-2 text-[11px] tracking-[0.2em] uppercase text-white/40">{m.label}</p>
+            </div>
+          ))}
+        </motion.div>
+
+      </div>
     </section>
-  );
-}
-
-/**
- * Hero 右侧的抽象视觉：
- * - 外层细圆环
- * - 内层细圆环
- * - 中心青色点 + 脉冲扩散
- * - 远处一两条切线 / 半径
- * 整体很克制，呼应"能量从一点向外辐射"的意象
- */
-function HeroVisual() {
-  return (
-    <div className="relative w-full aspect-square max-w-[480px]">
-      <svg
-        viewBox="0 0 480 480"
-        className="w-full h-full"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#14B8B0" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#14B8B0" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-
-        {/* 极轻光晕 */}
-        <circle cx="240" cy="240" r="200" fill="url(#centerGlow)" />
-
-        {/* 外层细圆环 */}
-        <motion.circle
-          cx="240"
-          cy="240"
-          r="200"
-          stroke="#14B8B0"
-          strokeWidth="0.5"
-          strokeDasharray="2 4"
-          opacity="0.4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.4 }}
-          transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-        />
-
-        {/* 中层圆环 */}
-        <motion.circle
-          cx="240"
-          cy="240"
-          r="140"
-          stroke="#0A2540"
-          strokeWidth="0.5"
-          opacity="0.15"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
-        />
-
-        {/* 内层小圆环 */}
-        <motion.circle
-          cx="240"
-          cy="240"
-          r="80"
-          stroke="#14B8B0"
-          strokeWidth="0.75"
-          opacity="0.6"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 1.1 }}
-        />
-
-        {/* 脉冲圆 1 */}
-        <motion.circle
-          cx="240"
-          cy="240"
-          r="20"
-          stroke="#14B8B0"
-          strokeWidth="1"
-          fill="none"
-          initial={{ r: 20, opacity: 0.8 }}
-          animate={{ r: [20, 180], opacity: [0.8, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeOut',
-            delay: 1.5,
-          }}
-        />
-        {/* 脉冲圆 2（错峰） */}
-        <motion.circle
-          cx="240"
-          cy="240"
-          r="20"
-          stroke="#14B8B0"
-          strokeWidth="1"
-          fill="none"
-          initial={{ r: 20, opacity: 0.8 }}
-          animate={{ r: [20, 180], opacity: [0.8, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeOut',
-            delay: 3,
-          }}
-        />
-
-        {/* 中心实心点 */}
-        <motion.circle
-          cx="240"
-          cy="240"
-          r="6"
-          fill="#14B8B0"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.4, ease: 'backOut' }}
-        />
-
-        {/* 远处的切点：模拟卫星节点 */}
-        <motion.circle
-          cx="440"
-          cy="240"
-          r="3"
-          fill="#0A2540"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.3 }}
-          transition={{ duration: 0.6, delay: 2.2 }}
-        />
-        <motion.circle
-          cx="40"
-          cy="240"
-          r="2"
-          fill="#14B8B0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
-          transition={{ duration: 0.6, delay: 2.4 }}
-        />
-        <motion.circle
-          cx="240"
-          cy="40"
-          r="2"
-          fill="#0A2540"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.3 }}
-          transition={{ duration: 0.6, delay: 2.6 }}
-        />
-
-        {/* 一条极细的对角线，暗示信号方向 */}
-        <motion.line
-          x1="240"
-          y1="240"
-          x2="440"
-          y2="240"
-          stroke="#14B8B0"
-          strokeWidth="0.5"
-          strokeDasharray="1 3"
-          opacity="0.4"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1.5, delay: 2 }}
-        />
-      </svg>
-    </div>
   );
 }

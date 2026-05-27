@@ -26,7 +26,7 @@ export function SodiumPillars() {
           {items.map((item, i) => (
             <Reveal key={item.number} delay={i * 0.1}>
               <div className="border-t border-ink-200 pt-6">
-                <p className="font-serif text-4xl lg:text-5xl font-medium text-teal-500 numeric leading-none mb-6">
+                <p className="font-serif text-4xl lg:text-5xl font-medium text-[#b8923f] numeric leading-none mb-6">
                   {item.number}
                 </p>
                 <h3 className="font-serif text-xl lg:text-2xl font-medium text-ink-900 mb-3">

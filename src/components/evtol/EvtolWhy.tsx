@@ -40,7 +40,7 @@ export function EvtolWhy() {
           {items.map((item, i) => (
             <Reveal key={item.number} delay={i * 0.12}>
               <div className="border-t border-ink-200 pt-8">
-                <p className="font-serif text-5xl lg:text-6xl font-medium text-teal-500 numeric leading-none mb-8">
+                <p className="font-serif text-5xl lg:text-6xl font-medium text-[#b8923f] numeric leading-none mb-8">
                   {item.number}
                 </p>
                 <h3 className="font-serif text-xl lg:text-2xl font-medium text-ink-900 mb-4">

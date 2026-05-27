@@ -23,7 +23,7 @@ export function ProductsHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="eyebrow text-teal-500 mb-8"
+              className="eyebrow text-[#b8923f] mb-8"
             >
               {t('eyebrow')}
             </motion.p>
@@ -102,9 +102,9 @@ function ProductsGridSvg() {
                 width="60"
                 height="160"
                 rx="2"
-                stroke={isFlagship ? '#14B8B0' : '#0A2540'}
+                stroke={isFlagship ? '#b8923f' : '#0A2540'}
                 strokeWidth={isFlagship ? 1.5 : 0.75}
-                fill={isFlagship ? 'rgba(20, 184, 176, 0.05)' : 'none'}
+                fill={isFlagship ? 'rgba(184, 146, 63, 0.06)' : 'none'}
                 opacity={isFlagship ? 1 : 0.5}
               />
               {/* 顶部极耳 */}
@@ -113,7 +113,7 @@ function ProductsGridSvg() {
                 y="32"
                 width="14"
                 height="8"
-                stroke={isFlagship ? '#14B8B0' : '#0A2540'}
+                stroke={isFlagship ? '#b8923f' : '#0A2540'}
                 strokeWidth="0.5"
                 opacity={isFlagship ? 0.8 : 0.4}
               />
@@ -122,13 +122,13 @@ function ProductsGridSvg() {
                 y="32"
                 width="14"
                 height="8"
-                stroke={isFlagship ? '#14B8B0' : '#0A2540'}
+                stroke={isFlagship ? '#b8923f' : '#0A2540'}
                 strokeWidth="0.5"
                 opacity={isFlagship ? 0.8 : 0.4}
               />
               {/* 中心点 */}
               {isFlagship && (
-                <circle cx={50 + i * 78} cy="120" r="2" fill="#14B8B0" />
+                <circle cx={50 + i * 78} cy="120" r="2" fill="#b8923f" />
               )}
             </motion.g>
           );
@@ -151,7 +151,7 @@ function ProductsGridSvg() {
                 width="40"
                 height="4"
                 rx="1"
-                stroke={isFlagship ? '#14B8B0' : '#0A2540'}
+                stroke={isFlagship ? '#b8923f' : '#0A2540'}
                 strokeWidth="0.5"
                 opacity={isFlagship ? 0.8 : 0.4}
               />
@@ -162,9 +162,9 @@ function ProductsGridSvg() {
                 width="50"
                 height="60"
                 rx="2"
-                stroke={isFlagship ? '#14B8B0' : '#0A2540'}
+                stroke={isFlagship ? '#b8923f' : '#0A2540'}
                 strokeWidth={isFlagship ? 1.5 : 0.75}
-                fill={isFlagship ? 'rgba(20, 184, 176, 0.05)' : 'none'}
+                fill={isFlagship ? 'rgba(184, 146, 63, 0.06)' : 'none'}
                 opacity={isFlagship ? 1 : 0.5}
               />
               {/* 标签 */}
@@ -174,7 +174,7 @@ function ProductsGridSvg() {
                   y="272"
                   fontSize="8"
                   fontFamily="JetBrains Mono, monospace"
-                  fill="#14B8B0"
+                  fill="#b8923f"
                   textAnchor="middle"
                   letterSpacing="1"
                 >

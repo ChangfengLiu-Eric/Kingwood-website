@@ -80,7 +80,7 @@ function InfoBlock({
   const Content = (
     <div className="border-t border-ink-200 pt-6">
       <div className="flex items-center gap-3 mb-3">
-        <span className="text-teal-500">{icon}</span>
+        <span className="text-[#b8923f]">{icon}</span>
         <p className="eyebrow text-ink-500">{label}</p>
       </div>
       {title && (
@@ -102,7 +102,7 @@ function InfoBlock({
     return (
       <a
         href={link}
-        className="block hover:text-teal-500 transition-colors group"
+        className="block hover:text-[#b8923f] transition-colors group"
         target={link.startsWith('http') ? '_blank' : undefined}
         rel={link.startsWith('http') ? 'noopener noreferrer' : undefined}
       >

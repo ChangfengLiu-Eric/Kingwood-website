@@ -19,7 +19,7 @@ export function SodiumHero() {
         className="absolute inset-0 opacity-30 pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 80% 30%, rgba(20, 184, 176, 0.15) 0%, transparent 50%)',
+            'radial-gradient(circle at 80% 30%, rgba(184, 146, 63, 0.12) 0%, transparent 50%)',
         }}
       />
 
@@ -31,7 +31,7 @@ export function SodiumHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="eyebrow text-teal-400 mb-8"
+              className="eyebrow text-[#b8923f] mb-8"
             >
               {t('eyebrow')}
             </motion.p>
@@ -105,13 +105,13 @@ function SodiumNaElementSvg() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 + i * 0.2, duration: 0.8 }}
           >
-            <circle cx={node.x} cy={node.y} r="4" fill="#14B8B0" opacity="0.6" />
+            <circle cx={node.x} cy={node.y} r="4" fill="#b8923f" opacity="0.6" />
             <text
               x={node.x}
               y={node.y + (node.y < 200 ? -14 : 22)}
               fontSize="9"
               fontFamily="JetBrains Mono, monospace"
-              fill="#14B8B0"
+              fill="#b8923f"
               letterSpacing="2"
               textAnchor="middle"
               opacity="0.7"
@@ -134,7 +134,7 @@ function SodiumNaElementSvg() {
             y1={y}
             x2="210"
             y2="210"
-            stroke="#14B8B0"
+            stroke="#b8923f"
             strokeWidth="0.5"
             strokeDasharray="3 4"
             opacity="0.3"
@@ -156,9 +156,9 @@ function SodiumNaElementSvg() {
             y="130"
             width="160"
             height="160"
-            stroke="#14B8B0"
+            stroke="#b8923f"
             strokeWidth="1"
-            fill="rgba(20, 184, 176, 0.05)"
+            fill="rgba(184, 146, 63, 0.06)"
           />
           {/* 左上原子序数 */}
           <text
@@ -166,7 +166,7 @@ function SodiumNaElementSvg() {
             y="155"
             fontSize="14"
             fontFamily="JetBrains Mono, monospace"
-            fill="#14B8B0"
+            fill="#b8923f"
             letterSpacing="1"
             fontWeight="500"
           >
@@ -191,7 +191,7 @@ function SodiumNaElementSvg() {
             y="258"
             fontSize="10"
             fontFamily="JetBrains Mono, monospace"
-            fill="#14B8B0"
+            fill="#b8923f"
             letterSpacing="3"
             textAnchor="middle"
             opacity="0.8"

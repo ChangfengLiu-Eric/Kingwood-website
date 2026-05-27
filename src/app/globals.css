@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ============ 字体导入 ============ */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+/* 字体通过 next/font/google 在 layout.tsx 中注入，此处不再 @import Google Fonts */
 
 :root {
-  --font-serif: 'Cormorant Garamond', 'Noto Serif SC';
+  --font-serif: 'Noto Serif SC', 'Cormorant Garamond';
   --font-sans: 'Inter', 'Noto Sans SC';
   --font-mono: 'JetBrains Mono';
 
   /* 设计 token */
-  --color-teal: #14B8B0;
+  --color-gold: #b8923f;
   --color-navy: #0A2540;
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F7F8FA;
-  --color-ink: #0A0E14;
-  --color-ink-soft: #5C6778;
-  --color-line: #EDEFF3;
+  --color-dark: #0a1220;
+  --color-bg: #ffffff;
+  --color-bg-alt: #fafaf8;
+  --color-ink: #0e1320;
+  --color-ink-secondary: #3a4150;
+  --color-ink-soft: #6a7180;
+  --color-ink-muted: #8a8f9a;
+  --color-line: #e8e8e4;
 }
 
 /* ============ 基础样式 ============ */
@@ -26,9 +28,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ✅ 移动端横向溢出兜底
-   防止任何子元素（SVG、绝对定位水印、长英文 URL）撑破视口
-   配合 body 上的 overflow-x-hidden 双保险 */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -39,69 +38,94 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, sans-serif;
   color: var(--color-ink);
   background: var(--color-bg);
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-/* ✅ 媒体元素自适应宽度，避免大尺寸 SVG / 图片在窄屏溢出 */
 img, svg, video, canvas {
   max-width: 100%;
   height: auto;
 }
-/* SVG 使用 viewBox 时不需要 height: auto 干预，单独还原 */
 svg[width][height] {
   height: revert;
 }
 
-/* 中文标题用思源宋体，英文标题用 Cormorant，自动判断 */
+/* ============ 字体工具类 ============ */
 .font-serif {
-  font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  font-family: 'Noto Serif SC', 'Cormorant Garamond', Georgia, serif;
+  font-feature-settings: 'palt' 1;
+}
+
+/* 大标题专用衬线体 */
+.kw2-serif {
+  font-family: var(--font-serif), 'Source Han Serif SC', 'STSong', Georgia, serif;
+  font-weight: 600;
   font-feature-settings: 'palt' 1;
 }
 
 /* ============ 选中高亮 ============ */
 ::selection {
-  background: var(--color-teal);
+  background: var(--color-gold);
   color: white;
 }
 
 /* ============ 滚动条 ============ */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-bg-alt);
-}
-::-webkit-scrollbar-thumb {
-  background: #D9DDE5;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #B5BCC9;
-}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-alt); }
+::-webkit-scrollbar-thumb { background: #d0cfc8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b0afaa; }
 
 /* ============ 工具类 ============ */
-/* eyebrow: 小标签，uppercase + 大字距 */
+
+/* eyebrow: 11px 宽字距大写标签 */
 .eyebrow {
-  font-size: 0.6875rem;
-  letter-spacing: 0.22em;
+  font-size: 0.6875rem;         /* 11px */
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--color-ink-soft);
   font-weight: 500;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* 数字展示：等距字体 */
-.numeric {
-  font-family: var(--font-mono), 'JetBrains Mono', monospace;
-  font-variant-numeric: tabular-nums;
+/* eyebrow 金色版 */
+.eyebrow-gold {
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 500;
 }
 
-/* 标题中的青色高亮关键词 */
+/* eyebrow 暗底版（白色） */
+.eyebrow-light {
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 500;
+}
+
+/* 数字单位：Georgia italic + 金色 */
+.unit-gold {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+/* 数字单位：灰色版 */
+.unit-muted {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-ink-muted);
+}
+
+/* 金色强调色 */
 .accent {
-  color: var(--color-teal);
+  color: var(--color-gold);
 }
 
 /* 内容容器 */
@@ -122,42 +146,34 @@ svg[width][height] {
 
 @media (min-width: 1280px) {
   .container-content {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
   }
 }
 
-/* 大留白 section */
+/* ============ Section 通用上下留白 ============ */
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 5rem;     /* 80px */
+  padding-bottom: 5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section-padding {
-    padding-top: 7.5rem;
+    padding-top: 7.5rem;   /* 120px */
     padding-bottom: 7.5rem;
   }
 }
 
-@media (min-width: 1280px) {
-  .section-padding {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-}
-
-/* 细分割线 */
+/* ============ 细分割线 ============ */
 .divider-thin {
-  border-top: 1px solid var(--color-line);
+  border-top: 0.5px solid var(--color-line);
 }
 
-/* navy section 的暗色 eyebrow */
-.eyebrow-dark {
-  color: rgba(255, 255, 255, 0.5);
+.divider-dark {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.12);
 }
 
-/* 链接下划线动画 */
+/* ============ 链接下划线动画 ============ */
 .link-underline {
   position: relative;
   display: inline-block;
@@ -178,21 +194,21 @@ svg[width][height] {
   transform: scaleX(1);
 }
 
-/* 按钮基础样式 */
+/* ============ 按钮 ============ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
-  background: var(--color-teal);
+  background: #14181f;
   color: white;
   font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: background 0.3s ease, transform 0.3s ease;
+  letter-spacing: 0.03em;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 .btn-primary:hover {
-  background: #109690;
+  background: #1e2530;
   transform: translateY(-1px);
 }
 
@@ -203,15 +219,15 @@ svg[width][height] {
   padding: 0.875rem 1.75rem;
   background: transparent;
   color: var(--color-ink);
-  border: 1px solid var(--color-line);
+  border: 1px solid #d8d6d0;
   font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 .btn-secondary:hover {
-  border-color: var(--color-teal);
-  color: var(--color-teal);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .btn-ghost-dark {
@@ -220,47 +236,30 @@ svg[width][height] {
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
   background: transparent;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   transition: all 0.3s ease;
 }
 .btn-ghost-dark:hover {
-  border-color: var(--color-teal);
-  color: var(--color-teal);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
-/* 滚动浮现 */
+/* ============ 滚动浮现 ============ */
 @keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
 }
 
-.reveal {
-  opacity: 0;
-}
-
+.reveal { opacity: 0; }
 .reveal.is-visible {
   animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* 网格图案背景（hero 区可选） */
-.bg-grid-faint {
-  background-image:
-    linear-gradient(to right, rgba(20, 184, 176, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(20, 184, 176, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
-
-/* 大尺寸竖排水印文字（参考效果图的 LTO·BATTERY 竖排水印） */
+/* ============ 竖排水印 ============ */
 .vertical-watermark {
   writing-mode: vertical-rl;
   text-orientation: mixed;

@@ -23,7 +23,7 @@ export function AboutHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="eyebrow text-teal-500 mb-8"
+              className="eyebrow text-[#b8923f] mb-8"
             >
               {t('eyebrow')}
             </motion.p>
@@ -106,7 +106,7 @@ function YearScaleSvg() {
           fontSize="11"
           fontFamily="JetBrains Mono, monospace"
           fontWeight="500"
-          fill="#14B8B0"
+          fill="#b8923f"
           textAnchor="middle"
           letterSpacing="6"
         >
@@ -121,7 +121,7 @@ function YearScaleSvg() {
           cx="40"
           cy="220"
           r="5"
-          fill="#14B8B0"
+          fill="#b8923f"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
@@ -169,7 +169,7 @@ function YearScaleSvg() {
           cx="400"
           cy="220"
           r="5"
-          fill="#14B8B0"
+          fill="#b8923f"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 1.8, duration: 0.6 }}
@@ -203,7 +203,7 @@ function YearScaleSvg() {
           y1="220"
           x2="400"
           y2="220"
-          stroke="#14B8B0"
+          stroke="#b8923f"
           strokeWidth="1"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
