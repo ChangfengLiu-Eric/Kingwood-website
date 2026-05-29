@@ -43,6 +43,12 @@ export function HomeEvtol() {
           {/* 右：文字 */}
           <div className="lg:col-span-6 order-1 lg:order-2">
 
+            <Reveal>
+              <div className="flex items-center gap-3 mb-8">
+                <span className="text-[11px] font-mono tracking-[0.2em] text-[#b8923f]">01</span>
+                <span className="h-px w-10 bg-[#b8923f]" />
+              </div>
+            </Reveal>
 
             <Reveal delay={0.1}>
               <h2 className="kw2-serif text-[clamp(1.875rem,3.8vw,2.375rem)] leading-[1.15] text-[#0e1320]">
