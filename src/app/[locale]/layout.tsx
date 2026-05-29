@@ -92,8 +92,8 @@ export default async function LocaleLayout({
       <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main className="flex-1">
-            <div id="scroll-sentinel" aria-hidden="true" className="absolute top-24 pointer-events-none" />
+          <main className="flex-1 relative">
+            <div id="scroll-sentinel" aria-hidden="true" className="absolute top-32 h-0 w-0 pointer-events-none" />
             {children}
           </main>
           <Footer />

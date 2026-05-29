@@ -14,15 +14,30 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
+    const getY = () =>
+      window.pageYOffset ?? document.documentElement.scrollTop ?? document.body.scrollTop ?? 0;
+
+    const update = () => setScrolled(getY() > 80);
+    update();
+
+    window.addEventListener('scroll', update, { passive: true });
+    document.addEventListener('scroll', update, { passive: true });
+
     const sentinel = document.getElementById('scroll-sentinel');
-    if (!sentinel) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setScrolled(!entry.isIntersecting),
-      { threshold: 0 }
-    );
-    observer.observe(sentinel);
-    setScrolled(sentinel.getBoundingClientRect().top < 0);
-    return () => observer.disconnect();
+    let observer: IntersectionObserver | null = null;
+    if (sentinel) {
+      observer = new IntersectionObserver(
+        ([entry]) => setScrolled(!entry.isIntersecting),
+        { threshold: 0 }
+      );
+      observer.observe(sentinel);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', update);
+      document.removeEventListener('scroll', update);
+      observer?.disconnect();
+    };
   }, []);
 
   useEffect(() => {
