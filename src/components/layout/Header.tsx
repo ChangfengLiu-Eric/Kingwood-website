@@ -14,30 +14,16 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const getY = () =>
-      window.pageYOffset ?? document.documentElement.scrollTop ?? document.body.scrollTop ?? 0;
-
-    const update = () => setScrolled(getY() > 80);
-    update();
-
-    window.addEventListener('scroll', update, { passive: true });
-    document.addEventListener('scroll', update, { passive: true });
-
-    const sentinel = document.getElementById('scroll-sentinel');
-    let observer: IntersectionObserver | null = null;
-    if (sentinel) {
-      observer = new IntersectionObserver(
-        ([entry]) => setScrolled(!entry.isIntersecting),
-        { threshold: 0 }
-      );
-      observer.observe(sentinel);
-    }
-
-    return () => {
-      window.removeEventListener('scroll', update);
-      document.removeEventListener('scroll', update);
-      observer?.disconnect();
+    let rafId: number;
+    let prev = false;
+    const check = () => {
+      const y = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset || 0;
+      const next = y > 80;
+      if (next !== prev) { prev = next; setScrolled(next); }
+      rafId = requestAnimationFrame(check);
     };
+    rafId = requestAnimationFrame(check);
+    return () => cancelAnimationFrame(rafId);
   }, []);
 
   useEffect(() => {
