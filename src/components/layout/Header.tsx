@@ -50,9 +50,9 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         mobileOpen
-          ? 'bg-white border-b border-[#e8e8e4]'
+          ? 'bg-white'
           : scrolled
-          ? 'bg-white/96 backdrop-blur-md border-b border-[#e8e8e4]'
+          ? 'bg-white/96 backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
@@ -135,14 +135,6 @@ export function Header() {
         )}
       </div>
 
-      {/* 底部分割线 */}
-      {!mobileOpen && (
-        <div
-          className={`absolute bottom-0 left-0 right-0 h-px transition-opacity duration-300 ${
-            scrolled ? 'opacity-100 bg-[#e8e8e4]' : 'opacity-0'
-          }`}
-        />
-      )}
     </header>
   );
 }
