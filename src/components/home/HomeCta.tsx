@@ -14,9 +14,9 @@ export function HomeCta() {
         <div className="max-w-3xl mx-auto text-center">
 
           <Reveal delay={0.12}>
-            <h2 className="kw2-serif text-[clamp(1.875rem,4.5vw,3.25rem)] leading-[1.2] text-[#0e1320] text-center">
-              <span className="block">{t('title1')}，</span>
-              <span className="block">
+            <h2 className="kw2-serif text-[clamp(1.875rem,4.5vw,3.25rem)] leading-[1.2] text-[#0e1320] text-center w-full">
+              <span className="block w-full text-center">{t('title1')}，</span>
+              <span className="block w-full text-center">
                 {t('title2')}
                 <span className="text-[#b8923f]">{t('titleHighlight')}</span>？
               </span>
