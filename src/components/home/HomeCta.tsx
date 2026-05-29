@@ -28,7 +28,7 @@ export function HomeCta() {
           </Reveal>
 
           <Reveal delay={0.22}>
-            <p className="mt-7 text-[15px] font-light leading-relaxed text-[#6a7180] max-w-lg mx-auto">
+            <p className="mt-7 text-[15px] font-light leading-relaxed text-[#6a7180]">
               {t('description')}
             </p>
           </Reveal>
