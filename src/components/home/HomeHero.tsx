@@ -156,7 +156,7 @@ export function HomeHero() {
         {/* 手机端：轨道图形背景，偏右居中 */}
         <motion.div
           className="lg:hidden absolute pointer-events-none"
-          style={{ top: '28%', right: '30px', transform: 'translateY(-50%) scale(0.72)', transformOrigin: 'center right', opacity: 0.65 }}
+          style={{ top: '35%', right: '30px', transform: 'translateY(-50%) scale(0.72)', transformOrigin: 'center right', opacity: 0.65 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.65 }}
           transition={{ duration: 1.2, delay: 0.5 }}
