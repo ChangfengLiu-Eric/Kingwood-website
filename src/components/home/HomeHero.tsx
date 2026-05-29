@@ -201,7 +201,18 @@ export function HomeHero() {
             </motion.div>
           </div>
 
-          {/* 右：持续动效轨道图形 */}
+          {/* 手机端：轨道图形居中，缩小 */}
+          <motion.div
+            className="flex lg:hidden col-span-1 items-center justify-center mt-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
+            style={{ transform: 'scale(0.72)', transformOrigin: 'center' }}
+          >
+            <OrbitalVisual />
+          </motion.div>
+
+          {/* 桌面端：右列轨道图形 */}
           <motion.div
             className="hidden lg:flex lg:col-span-5 items-center justify-center"
             initial={{ opacity: 0 }}
