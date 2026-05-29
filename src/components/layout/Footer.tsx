@@ -41,7 +41,7 @@ export function Footer() {
       <div className="container-content py-16 lg:py-24">
 
         {/* 上半：品牌 + 四列链接 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16 lg:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 mb-12 lg:mb-20">
 
           {/* 品牌区 */}
           <div className="lg:col-span-5">
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
 
           {/* 四列导航链接 */}
-          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {columns.map((col) => (
               <div key={col.title}>
                 <h4 className="eyebrow-light mb-5">{col.title}</h4>
