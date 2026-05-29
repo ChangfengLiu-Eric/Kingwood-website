@@ -172,7 +172,7 @@ export function HomeHero() {
           {/* 左：文字 */}
           <div className="lg:col-span-7 relative z-10">
             <motion.div {...fade(0.08)} className="flex items-center gap-5 mb-10 lg:mb-12">
-              <span className="text-[11px] tracking-[0.32em] uppercase text-white/45 font-medium whitespace-nowrap">
+              <span className="text-[11px] tracking-[0.32em] uppercase text-white/70 font-medium whitespace-nowrap">
                 {t('eyebrow')}
               </span>
               <span className="h-px w-12 bg-[#b8923f] flex-shrink-0" />
