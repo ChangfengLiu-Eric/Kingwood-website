@@ -27,6 +27,7 @@ export function Logo({ variant = 'dark' }: LogoProps) {
       <svg
         width="34"
         height="34"
+        className="w-12 h-12 lg:w-[34px] lg:h-[34px]"
         viewBox="0 0 44 44"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +61,7 @@ export function Logo({ variant = 'dark' }: LogoProps) {
       <div className="flex flex-col justify-center leading-none">
         {/* KINGWOOD 主文字 */}
         <span
-          className={`text-[15px] font-bold tracking-[0.22em] uppercase transition-colors ${
+          className={`text-[18px] lg:text-[15px] font-bold tracking-[0.22em] uppercase transition-colors ${
             isLight ? 'text-white' : 'text-[#0e1320]'
           }`}
           style={{ fontFamily: 'var(--font-sans), system-ui, sans-serif' }}
@@ -69,7 +70,7 @@ export function Logo({ variant = 'dark' }: LogoProps) {
         </span>
         {/* 金华达 副文字 */}
         <span
-          className={`text-[10px] tracking-[0.28em] mt-1 transition-colors ${
+          className={`text-[12px] lg:text-[10px] tracking-[0.28em] mt-1 transition-colors ${
             isLight ? 'text-white/55' : 'text-[#8a8f9a]'
           }`}
           style={{ fontFamily: 'var(--font-sans), "PingFang SC", system-ui, sans-serif' }}
