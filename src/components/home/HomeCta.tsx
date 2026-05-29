@@ -18,7 +18,7 @@ export function HomeCta() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <h2 className="kw2-serif text-[clamp(1.875rem,4.5vw,3.25rem)] leading-[1.2] text-[#0e1320]">
+            <h2 className="kw2-serif text-[clamp(1.875rem,4.5vw,3.25rem)] leading-[1.2] text-[#0e1320] text-center">
               <span className="block">{t('title1')}，</span>
               <span className="block">
                 {t('title2')}
@@ -28,7 +28,7 @@ export function HomeCta() {
           </Reveal>
 
           <Reveal delay={0.22}>
-            <p className="mt-7 text-[15px] font-light leading-relaxed text-[#6a7180]">
+            <p className="mt-7 text-[15px] font-light leading-relaxed text-[#6a7180] text-center">
               {t('description')}
             </p>
           </Reveal>
