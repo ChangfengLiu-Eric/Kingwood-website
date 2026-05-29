@@ -41,7 +41,7 @@ export function HomeSodium() {
 
             <Reveal>
               <div className="flex items-center gap-3 mb-8">
-                <span className="text-[15px] font-mono tracking-[0.2em] text-[#b8923f]">03</span>
+                <span className="text-[15px] lg:text-[22px] font-mono tracking-[0.2em] text-[#b8923f]">03</span>
                 <span className="h-px w-12 bg-[#b8923f]" />
               </div>
             </Reveal>
