@@ -152,6 +152,17 @@ export function HomeHero() {
           opacity: 0.028,
         }} />
         <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(4,9,15,0.65) 100%)' }} />
+
+        {/* 手机端：轨道图形背景，偏右居中 */}
+        <motion.div
+          className="lg:hidden absolute pointer-events-none"
+          style={{ top: '50%', right: '-60px', transform: 'translateY(-50%) scale(0.72)', transformOrigin: 'center right', opacity: 0.65 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.65 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
+        >
+          <OrbitalVisual />
+        </motion.div>
       </div>
 
       {/* ── 内容 ────────────────────────────────────────────────────────── */}
@@ -159,7 +170,7 @@ export function HomeHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
           {/* 左：文字 */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 relative z-10">
             <motion.div {...fade(0.08)} className="flex items-center gap-5 mb-10 lg:mb-12">
               <span className="text-[11px] tracking-[0.32em] uppercase text-white/45 font-medium whitespace-nowrap">
                 {t('eyebrow')}
@@ -200,17 +211,6 @@ export function HomeHero() {
               </Link>
             </motion.div>
           </div>
-
-          {/* 手机端：轨道图形居中，缩小 */}
-          <motion.div
-            className="flex lg:hidden col-span-1 items-center justify-center mt-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-            style={{ transform: 'scale(0.72)', transformOrigin: 'center' }}
-          >
-            <OrbitalVisual />
-          </motion.div>
 
           {/* 桌面端：右列轨道图形 */}
           <motion.div
