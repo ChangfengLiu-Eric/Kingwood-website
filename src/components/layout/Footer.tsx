@@ -56,16 +56,16 @@ export function Footer() {
           </div>
 
           {/* 四列导航链接 */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="lg:col-span-7 grid grid-cols-4 gap-4 lg:gap-8">
             {columns.map((col) => (
               <div key={col.title}>
-                <h4 className="eyebrow-light mb-5">{col.title}</h4>
-                <ul className="space-y-3">
+                <h4 className="eyebrow-light mb-4 text-[10px] lg:text-[11px]">{col.title}</h4>
+                <ul className="space-y-2.5">
                   {col.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-white/65 hover:text-white transition-colors"
+                        className="text-xs lg:text-sm text-white/65 hover:text-white transition-colors leading-snug block"
                       >
                         {link.label}
                       </Link>
