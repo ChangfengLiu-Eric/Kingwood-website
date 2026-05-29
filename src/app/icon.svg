@@ -1,9 +1,9 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 白色背景 -->
-  <rect width="512" height="512" rx="112" fill="#ffffff"/>
-  <!-- 外层圆角矩形框（深色） -->
-  <rect x="23" y="23" width="466" height="466" rx="87" stroke="#0e1320" stroke-width="25"/>
-  <!-- 内层圆角矩形框（浅深色） -->
+  <!-- 深色背景 -->
+  <rect width="512" height="512" rx="112" fill="#0a1220"/>
+  <!-- 外层圆角矩形框（白色） -->
+  <rect x="23" y="23" width="466" height="466" rx="87" stroke="rgba(255,255,255,0.90)" stroke-width="25"/>
+  <!-- 内层圆角矩形框 -->
   <rect x="76" y="76" width="360" height="360" rx="58" stroke="#2a3040" stroke-width="18"/>
   <!-- K 左竖：实心长方形 -->
   <rect x="116" y="116" width="93" height="280" rx="12" fill="#b8923f"/>
