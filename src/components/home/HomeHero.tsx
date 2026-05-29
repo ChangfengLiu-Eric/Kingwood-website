@@ -178,9 +178,9 @@ export function HomeHero() {
                 <span className="text-[#b8923f]">{t('titleHighlight2')}</span>
               </span>
               {/* 手机端：三行 */}
-              <span className="block sm:hidden">{t('titleMobileLine1')}</span>
-              <span className="block sm:hidden">{t('titleMobileLine2')}</span>
-              <span className="block sm:hidden">
+              <span className="block sm:hidden leading-[1.4]">{t('titleMobileLine1')}</span>
+              <span className="block sm:hidden leading-[1.4]">{t('titleMobileLine2')}</span>
+              <span className="block sm:hidden leading-[1.4]">
                 {t('titleMobileLine3')}
                 <span className="text-[#b8923f]">{t('titleMobileHighlight3')}</span>
               </span>
