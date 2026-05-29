@@ -39,6 +39,13 @@ export function HomeSodium() {
           {/* 左：标题 + 描述 + 链接 */}
           <div className="lg:col-span-6">
 
+            <Reveal>
+              <div className="flex items-center gap-3 mb-8">
+                <span className="text-[15px] font-mono tracking-[0.2em] text-[#b8923f]">03</span>
+                <span className="h-px w-12 bg-[#b8923f]" />
+              </div>
+            </Reveal>
+
             {/* eyebrow 明确写出"钠离子电池" */}
             <Reveal>
               <p className="eyebrow-gold mb-8">{t('label')}</p>
