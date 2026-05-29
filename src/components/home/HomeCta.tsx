@@ -13,10 +13,6 @@ export function HomeCta() {
       <div className="container-content">
         <div className="max-w-3xl mx-auto text-center">
 
-          <Reveal>
-            <p className="eyebrow-gold mb-10">{t('eyebrow')}</p>
-          </Reveal>
-
           <Reveal delay={0.12}>
             <h2 className="kw2-serif text-[clamp(1.875rem,4.5vw,3.25rem)] leading-[1.2] text-[#0e1320] text-center">
               <span className="block">{t('title1')}，</span>
