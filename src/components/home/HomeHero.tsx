@@ -171,10 +171,18 @@ export function HomeHero() {
               {...fade(0.2)}
               className="kw2-serif text-[clamp(1.75rem,3.8vw,3rem)] leading-[1.15] tracking-tight text-white"
             >
-              <span className="block">{t('titleLine1')}{t('titleHighlight1')}</span>
-              <span className="block">
+              {/* 桌面端：两行 */}
+              <span className="hidden sm:block">{t('titleLine1')}{t('titleHighlight1')}</span>
+              <span className="hidden sm:block">
                 {t('titleLine2')}
                 <span className="text-[#b8923f]">{t('titleHighlight2')}</span>
+              </span>
+              {/* 手机端：三行 */}
+              <span className="block sm:hidden">{t('titleMobileLine1')}</span>
+              <span className="block sm:hidden">{t('titleMobileLine2')}</span>
+              <span className="block sm:hidden">
+                {t('titleMobileLine3')}
+                <span className="text-[#b8923f]">{t('titleMobileHighlight3')}</span>
               </span>
             </motion.h1>
 
