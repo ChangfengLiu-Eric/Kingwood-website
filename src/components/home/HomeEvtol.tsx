@@ -43,11 +43,6 @@ export function HomeEvtol() {
           {/* 右：文字 */}
           <div className="lg:col-span-6 order-1 lg:order-2">
 
-            <Reveal>
-              <span className="inline-block border border-[#b8923f] text-[#b8923f] text-[10px] tracking-[0.32em] uppercase px-3 py-1 mb-8">
-                {t('flagshipLabel')}
-              </span>
-            </Reveal>
 
             <Reveal delay={0.1}>
               <h2 className="kw2-serif text-[clamp(1.875rem,3.8vw,2.375rem)] leading-[1.15] text-[#0e1320]">

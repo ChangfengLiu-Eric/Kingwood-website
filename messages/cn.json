@@ -324,7 +324,7 @@
   },
   "evtol": {
     "hero": {
-      "eyebrow": "FLAGSHIP · 01  /  eVTOL AVIATION BATTERY",
+      "eyebrow": "eVTOL AVIATION BATTERY",
       "model": "KW-eVTOL-01",
       "title1": "为低空经济",
       "title2": "提供",
@@ -377,7 +377,7 @@
   },
   "lto": {
     "hero": {
-      "eyebrow": "FLAGSHIP · 02  /  LTO TECHNOLOGY",
+      "eyebrow": "LTO TECHNOLOGY",
       "title1": "钛酸锂",
       "title2": "为极端而生",
       "subtitle": "LITHIUM TITANATE  ·  BORN FOR EXTREMES",
