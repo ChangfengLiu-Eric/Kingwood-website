@@ -31,16 +31,6 @@ export function ContactInfo() {
         />
       </Reveal>
 
-      {/* 营销中心 */}
-      <Reveal delay={0.2}>
-        <InfoBlock
-          icon={<MapPin size={18} />}
-          label={t('marketing.label')}
-          title={t('marketing.title')}
-          lines={[t('marketing.address'), t('marketing.phone')]}
-        />
-      </Reveal>
-
       {/* 邮箱 */}
       <Reveal delay={0.3}>
         <InfoBlock
