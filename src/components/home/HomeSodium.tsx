@@ -34,7 +34,7 @@ export function HomeSodium() {
       </div>
 
       <div className="container-content relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
 
           {/* 左：标题 + 描述 + 链接 */}
           <div className="lg:col-span-6">
