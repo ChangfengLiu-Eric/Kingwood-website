@@ -51,7 +51,6 @@ export function Footer() {
             </p>
             <div className="mt-8 space-y-2 text-xs text-white/30">
               <p>{t('factory')}</p>
-              <p>{t('marketing')}</p>
             </div>
           </div>
 
