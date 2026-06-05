@@ -31,10 +31,10 @@ export function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  // 只有首页顶部（深色 Hero）才用白字，其他页面始终用深色
+  // 深色 Hero 的页面顶部用白字透明导航
   const pathname = usePathname();
-  const isHomePage = /^\/(cn|en)?\/?$/.test(pathname);
-  const isLight = isHomePage && !scrolled && !mobileOpen;
+  const isDarkHeroPage = /^\/(cn|en)?\/(evtol|lto|sodium-ion)\/?$|^\/(cn|en)?\/?$/.test(pathname);
+  const isLight = isDarkHeroPage && !scrolled && !mobileOpen;
 
   const navItems: {
     href: '/' | '/about' | '/evtol' | '/lto' | '/sodium-ion' | '/products' | '/applications' | '/contact';
