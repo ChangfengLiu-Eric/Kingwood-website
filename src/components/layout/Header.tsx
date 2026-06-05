@@ -33,7 +33,7 @@ export function Header() {
 
   // 深色 Hero 的页面顶部用白字透明导航
   const pathname = usePathname();
-  const isDarkHeroPage = /^\/(cn|en)?\/(evtol|lto|sodium-ion)\/?$|^\/(cn|en)?\/?$/.test(pathname);
+  const isDarkHeroPage = /^\/(cn|en)?\/sodium-ion\/?$|^\/(cn|en)?\/?$/.test(pathname);
   const isLight = isDarkHeroPage && !scrolled && !mobileOpen;
 
   const navItems: {
